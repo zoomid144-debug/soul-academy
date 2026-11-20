@@ -1,0 +1,7202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- 스마트폰·태블릿에서도 화면이 정상적으로 보이게 합니다. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 검색엔진에 표시되는 홈페이지 설명입니다. -->
+  <meta
+    name="description"
+    content="웰니스 PLUS 다옴 아카데미 홈페이지입니다."
+  >
+
+ <!-- 네이버 사이트 확인 -->
+<meta name="naver-site-verification" content="1b179f01dc5557bc808f4ca3df7223f89da65d05" />
+
+<!-- 구글 사이트 확인 -->
+<meta name="google-site-verification" content="89fkWwqLza5ue1EdiXDJw4pwI2dJ6SHQ47AKpPvT-NU" />
+
+  <title>웰니스 PLUS | 다옴 아카데미</title>
+<!-- Open Graph -->
+<meta property="og:title" content="웰니스 PLUS | 다옴 아카데미">
+<meta property="og:description" content="웰니스 PLUS 다옴 아카데미 홈페이지입니다.">
+<meta property="og:url" content="https://daomacademy.com/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://daomacademy.com/">
+
+  <!-- 기본 한글 폰트 : Pretendard -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  >
+
+
+  <!-- 고급스러운 제목용 폰트 : Noto Serif KR -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap"
+  >
+
+
+  <!-- 슬라이드 기능을 위한 Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  >
+
+
+  <!-- 내가 만든 CSS 파일 -->
+  <!-- 통합본: 기존 style.css 전체를 아래에 내장했습니다. -->
+<style>
+/* 모든 요소의 크기 계산 방식을 통일합니다. */
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   홈페이지 공통 색상
+========================= */
+:root {
+  --button-dark: #332d29;
+  --button-dark-hover: #4a403a;
+  --button-text: #ffffff;
+
+  --button-light: #fff8f1;
+  --button-light-hover: #eadfd8;
+
+  --pink-light: #fff0f3;
+  --pink-text: #9a6874;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #222;
+  background: #fff8f9;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 공통 너비 */
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* 공통 여백 */
+.section {
+  padding: 64px 0;
+}
+
+.small-title {
+  margin: 0 0 12px;
+  color: #9b7d56;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.section-title h2,
+.section-heading h2 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.25;
+}
+
+.center {
+  text-align: center;
+}
+
+/* =========================
+   헤더
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 248, 249, 0.92);
+  border-bottom: 1px solid rgba(80, 60, 50, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 40px));
+  height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 800;
+}
+
+.logo span {
+  font-size: 24px;
+}
+
+.logo small {
+  color: #9b7d56;
+  font-size: 14px;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 34px;
+}
+
+.main-menu a {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.main-menu a:hover {
+  color: #9b7d56;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-button,
+.login-button {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+.apply-button {
+  padding: 11px 20px;
+
+  color: var(--button-text);
+  background: var(--button-dark);
+
+  border: 1px solid var(--button-dark);
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.apply-button:hover {
+  transform: translateY(-2px);
+
+  background: var(--button-dark-hover);
+  box-shadow: 0 8px 18px rgba(51, 45, 41, 0.2);
+}
+
+.mobile-menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 26px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* =========================
+   메인 슬라이드
+========================= */
+
+/* 자작나무 배경이 들어가는 전체 영역 */
+.hero {
+  position: relative;
+  padding: 0;
+
+  background-image: url("images/자작나무숲.jpg");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* 자작나무 사진을 연하게 만드는 흰색 투명막 */
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 기존의 큰 사각 박스 제거 */
+.hero-slider {
+  position: relative;
+  z-index: 2;
+
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  overflow: hidden;
+}
+
+/* 글자와 오른쪽 사진을 가로로 배치 */
+.hero-slide {
+  position: relative;
+  z-index: 2;
+
+  min-height: 560px;
+
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 45px;
+}
+
+/* 왼쪽 글자 영역 */
+.hero-text {
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
+  transform: none;
+}
+
+/* 메인 제목 - 깔끔한 고딕체 */
+.hero-text h1,
+.hero-text h2 {
+  margin: 0 0 22px;
+
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+
+  font-size: clamp(42px, 4vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+  word-break: keep-all;
+}
+
+/* 설명 문장 */
+.hero-description {
+  max-width: 520px;
+  margin: 0 0 28px;
+
+  color: #625d59;
+  font-size: 17px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+/* 버튼 영역 */
+.hero-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* 버튼 공통 디자인 */
+.primary-button,
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+  border-radius: 30px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 메인 수강신청 버튼 */
+.primary-button {
+  color: var(--button-text);
+  background: var(--button-dark);
+
+  border: 1px solid var(--button-dark);
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+
+  background: var(--button-dark-hover);
+  box-shadow: 0 8px 18px rgba(51, 45, 41, 0.2);
+}
+
+/* 자세히 보기 버튼 */
+.outline-button {
+  color: var(--button-dark);
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(51, 45, 41, 0.45);
+}
+
+.outline-button:hover {
+  transform: translateY(-2px);
+
+  color: var(--button-text);
+  background: var(--button-dark-hover);
+  border-color: var(--button-dark-hover);
+}
+
+/* =========================
+   오른쪽 메인 사진 액자
+========================= */
+
+/* 사진을 감싸는 흰색 액자 */
+.hero-image {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  justify-self: center;
+
+  /* 흰 액자 두께 */
+  padding: 13px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(51, 45, 41, 0.10);
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 38px rgba(51, 45, 41, 0.14);
+}
+
+/* 실제 오른쪽 메인 사진 */
+.hero-image img {
+  display: block;
+
+  /* ★ 사진 크기 */
+  width: 520px;
+  height: auto;
+
+  /* 화면보다 커지지 않도록 */
+  max-width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  border-radius: 14px;
+
+  /* 사진을 자르지 않음 */
+  object-fit: contain;
+  object-position: center;
+
+  box-shadow: none;
+
+  transition: transform 0.3s ease;
+}
+
+/* 마우스를 사진에 올렸을 때 */
+.hero-image:hover img {
+  transform: scale(1.01);
+}
+
+/* =========================
+   소개
+========================= */
+
+/* 왼쪽 제목과 오른쪽 설명을 좌우로 배치 */
+.about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 48px;
+  align-items: center;
+}
+
+/* 오른쪽 설명 영역 */
+.about-text {
+  max-width: 560px;
+  padding-left: 34px;
+
+  color: #555;
+  font-size: 17px;
+  line-height: 1.75;
+
+  border-left: 1px solid #dfd4cb;
+}
+
+/* 설명 문단 사이 간격 */
+.about-text p {
+  margin: 0 0 20px;
+}
+
+/* 마지막 문단 아래에는 불필요한 간격 제거 */
+.about-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 프로그램 살펴보기 링크 */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+  padding-bottom: 5px;
+
+  color: #2f2925;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(47, 41, 37, 0.35);
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* 링크에 마우스를 올렸을 때 */
+.arrow-link:hover {
+  gap: 13px;
+  color: #a6814f;
+  border-color: #a6814f;
+}
+
+#about {
+  padding-top: 54px;
+  padding-bottom: 50px;
+}
+
+/* =========================
+   추천 강좌
+========================= */
+
+.section-heading {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.course-card {
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid rgba(83, 65, 53, 0.09);
+  border-radius: 20px;
+
+  box-shadow: 0 8px 24px rgba(60, 45, 35, 0.05);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(185, 126, 139, 0.22);
+  box-shadow: 0 16px 34px rgba(60, 45, 35, 0.10);
+}
+
+.course-image img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 22px;
+}
+
+.course-tags {
+  display: flex;
+  gap: 7px;
+}
+
+.course-tags span {
+  padding: 5px 10px;
+
+  color: #8c6670;
+  background: #fff0f3;
+  border: 1px solid #f3e0e5;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.course-content h3 {
+  margin: 16px 0 8px;
+  font-size: 20px;
+}
+
+.course-content p {
+  color: #777;
+  font-size: 14px;
+}
+
+.course-info {
+  margin: 18px 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.course-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-bottom button {
+  padding: 9px 14px;
+
+  color: var(--button-text);
+  background: var(--button-dark);
+
+  border: 1px solid var(--button-dark);
+  border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.course-bottom button:hover {
+  transform: translateY(-2px);
+
+  background: var(--button-dark-hover);
+  box-shadow: 0 7px 16px rgba(51, 45, 41, 0.18);
+}
+
+/* =========================
+   문화갤러리
+========================= */
+/* 문화갤러리 전체 배경 */
+.gallery-section {
+  padding-top: 56px;
+  padding-bottom: 48px;
+  background: #fff8f9;
+}
+
+.gallery-heading {
+  margin-bottom: 28px;
+  display: block;
+}
+
+/* 문화갤러리 큰 제목 */
+.gallery-heading h2 {
+  margin: 0;
+
+  color: #222;
+  font-size: 42px;
+  line-height: 1.25;
+  letter-spacing: -2px;
+}
+
+/* 안내문 */
+.gallery-intro {
+  max-width: 480px;
+  margin: 12px 0 0;
+
+  color: #666;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* 카드 3개씩 배치 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+/* 각각의 갤러리 카드 */
+.gallery-card {
+  position: relative;
+
+  width: 100%;
+  height: 330px;
+
+  overflow: hidden;
+
+  background: #e7dfda;
+  border: 1px solid rgba(82, 62, 52, 0.1);
+  border-radius: 22px;
+
+  box-shadow: 0 10px 28px rgba(65, 45, 36, 0.07);
+
+  cursor: zoom-in;
+
+  transition:
+    transform 0.32s ease,
+    box-shadow 0.32s ease,
+    border-color 0.32s ease;
+}
+
+/* 모든 사진을 같은 크기의 틀에 채움 */
+.gallery-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+/* 사진 위 어두운 투명막 */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(39, 31, 28, 0.92) 0%,
+      rgba(39, 31, 28, 0.5) 48%,
+      rgba(39, 31, 28, 0.04) 80%
+    );
+
+  transition: background 0.35s ease;
+}
+
+/* 사진 위 글자 영역 */
+.gallery-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 2;
+
+  min-height: 160px;
+  padding: 24px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: #fff;
+}
+
+/* 영문 분류 */
+.gallery-category {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* 작품 제목 */
+.gallery-content h3 {
+  margin: 0 0 8px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+
+  word-break: keep-all;
+}
+
+/* 작품 설명 */
+.gallery-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.6;
+
+  word-break: keep-all;
+}
+
+/* 생각 질문 */
+.gallery-question {
+  max-height: 0;
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #fff0d7;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition:
+    max-height 0.35s ease,
+    margin-top 0.35s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* 마우스를 올렸을 때 카드 */
+.gallery-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(166, 129, 79, 0.22);
+
+  box-shadow: 0 18px 40px rgba(65, 45, 36, 0.13);
+}
+
+/* 마우스를 올렸을 때 사진 확대 */
+.gallery-card:hover img {
+  transform: scale(1.055);
+}
+
+/* 마우스를 올렸을 때 투명막을 조금 진하게 */
+.gallery-card:hover .gallery-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(39, 31, 28, 0.95) 0%,
+      rgba(39, 31, 28, 0.65) 60%,
+      rgba(39, 31, 28, 0.12) 100%
+    );
+}
+
+/* 마우스를 올렸을 때 질문 표시 */
+.gallery-card:hover .gallery-question {
+  max-height: 52px;
+  margin-top: 9px;
+
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 기본 사진 중심 */
+.gallery-image-center {
+  object-position: center;
+}
+
+/* 사진 위쪽을 더 보여줌 */
+.gallery-image-top {
+  object-position: center top !important;
+}
+
+/* 사진 아래쪽을 더 보여줌 */
+.gallery-image-bottom {
+  object-position: center bottom !important;
+}
+
+/* =========================
+   갤러리 이미지 크게 보기
+========================= */
+
+/* 클릭 가능한 이미지 표시 */
+.gallery-click-image {
+  cursor: zoom-in;
+}
+
+/* 전체 화면 팝업 배경 */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+
+  padding: 40px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: rgba(25, 20, 18, 0.92);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* 팝업이 열렸을 때 */
+.gallery-modal.is-open {
+  display: flex;
+  opacity: 1;
+}
+
+/* 크게 보이는 이미지 */
+.gallery-modal-image {
+  display: block;
+
+  max-width: min(1100px, 90vw);
+  max-height: 82vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  background: #fff;
+  border-radius: 12px;
+
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+}
+
+/* 이미지 설명 */
+.gallery-modal-caption {
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 닫기 버튼 */
+.gallery-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* 닫기 버튼 마우스 효과 */
+.gallery-modal-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   문화갤러리 태블릿
+========================= */
+
+@media (max-width: 900px) {
+
+  .gallery-heading {
+    margin-bottom: 24px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 36px;
+  }
+
+  .gallery-intro {
+    font-size: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .gallery-card {
+    height: 310px;
+    border-radius: 20px;
+  }
+
+  .gallery-content {
+    min-height: 155px;
+    padding: 22px;
+  }
+
+  .gallery-content h3 {
+    font-size: 19px;
+  }
+
+  .gallery-description {
+    font-size: 12px;
+  }
+
+  /* 태블릿은 질문을 항상 표시 */
+  .gallery-question {
+    max-height: 52px;
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 태블릿 팝업 */
+  .gallery-modal {
+    padding: 30px;
+  }
+
+  .gallery-modal-image {
+    max-width: 92vw;
+    max-height: 80vh;
+  }
+}
+
+
+/* =========================
+   문화갤러리 스마트폰
+========================= */
+
+@media (max-width: 600px) {
+
+  .gallery-heading {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .gallery-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .gallery-intro {
+    margin-top: 10px;
+
+    font-size: 14px;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gallery-card {
+    height: 285px;
+    border-radius: 18px;
+  }
+
+  .gallery-content {
+    min-height: 145px;
+    padding: 19px;
+  }
+
+  .gallery-category {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .gallery-content h3 {
+    margin-bottom: 6px;
+
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .gallery-description {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .gallery-question {
+    max-height: 50px;
+    margin-top: 7px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 스마트폰 팝업 */
+  .gallery-modal {
+    padding: 18px;
+  }
+
+  .gallery-modal-image {
+    max-width: 94vw;
+    max-height: 76vh;
+
+    border-radius: 9px;
+  }
+
+  .gallery-modal-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 27px;
+  }
+
+  .gallery-modal-caption {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   새로운 강사진 소개
+========================= */
+
+/* 강사진 전체 영역 */
+.instructors-section {
+  padding: 50px 0;
+  background: #fffafb;
+}
+
+
+/* 강사진 콘텐츠 최대 너비 */
+.instructors-container {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* 위쪽 제목 영역 */
+.instructors-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+/* 작은 영문 제목 */
+.instructors-small-title {
+  margin: 0 0 12px;
+
+  color: #a47d4d;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* 큰 제목 */
+.instructors-heading h2 {
+  margin: 0;
+
+  color: #222;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -1.7px;
+}
+
+
+/* 제목 아래 설명 */
+.instructors-intro {
+  margin: 12px auto 0;
+  max-width: 620px;
+
+  color: #777;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   대표 강사 카드
+========================= */
+.main-instructor-card {
+  margin-bottom: 28px;
+  padding: 28px 32px;
+
+  display: block;
+
+  background: #ffffff;
+  border: 1px solid #eee5e2;
+  border-radius: 24px;
+
+  box-shadow: 0 10px 28px rgba(80, 50, 40, 0.055);
+}
+
+/* 대표 강사 내부 배치 */
+.main-instructor-content {
+  padding: 0;
+
+  display: grid;
+
+  /* 왼쪽 정보 330px, 오른쪽 소개글은 남은 공간 */
+  grid-template-columns: 340px minmax(0, 1fr);
+
+  /* 각 내용을 어느 위치에 놓을지 정합니다. */
+  grid-template-areas:
+    "badge description"
+    "name description"
+    "role description"
+    "career description";
+
+  column-gap: 38px;
+  row-gap: 0;
+
+  align-items: center;
+}
+
+/* 대표 강사 배지 */
+.instructor-badge {
+  grid-area: badge;
+
+  display: inline-block;
+  justify-self: start;
+
+  margin-left: 0px;
+  margin-bottom: 10px;
+  padding: 7px 16px;
+
+  color: white;
+  background: #c98996;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* 대표 강사 이름 */
+.main-instructor-content h3 {
+  grid-area: name;
+
+  margin: 0 0 6px;
+
+  color: #222;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+
+/* 대표 강사 분야 */
+.main-instructor-role {
+  grid-area: role;
+
+  margin: 0 0 16px;
+
+  color: #a56f7b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* 대표 강사 경력 박스 */
+.main-instructor-career {
+  grid-area: career;
+
+  width: fit-content;
+  min-width: 230px;
+
+  margin: 0;
+  padding: 12px 17px;
+
+  list-style: none;
+
+  color: #555;
+  background: #fff5f6;
+
+  border: 1px solid #f2dfe3;
+  border-radius: 15px;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.main-instructor-description {
+  grid-area: description;
+  align-self: center;
+
+  margin: 0;
+  padding: 6px 4px 6px 32px;
+
+  color: #666;
+  border-left: 1px solid #eadcde;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* 대표 강사 경력 한 줄씩 정렬 */
+.main-instructor-career li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 7px;
+}
+
+/* 대표 강사 경력 앞 점 */
+.main-instructor-career li::before {
+  content: "•";
+  margin-right: 6px;
+  color: #c98996;
+}
+
+/* =========================
+   아래 코치 카드
+========================= */
+
+/* 카드 4개 배치 */
+.instructor-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+
+/* 각각의 코치 카드 */
+.instructor-profile-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  background: #ffffff;
+  border: 1px solid #eee6e2;
+  border-radius: 22px;
+
+  box-shadow: 0 8px 22px rgba(70, 45, 40, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* 카드에 마우스를 올렸을 때 */
+.instructor-profile-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 34px rgba(70, 45, 40, 0.10);
+}
+
+/* 코치 프로필 사진: 인물의 얼굴과 상반신이 잘리지 않도록 원본 비율 유지 */
+.instructor-profile-photo {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: contain;
+  object-position: center center;
+  background: #f7f5f8;
+  flex-shrink: 0;
+}
+
+
+/* 코치 설명 영역 */
+.instructor-profile-content {
+  flex: 1;
+  min-height: 0;
+  padding: 18px 20px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+/* Fellow 표시 */
+.instructor-position {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  width: auto;
+  min-width: 88px;
+
+  margin-bottom: 12px;
+  padding: 5px 14px;
+
+  color: #8a6f63;
+  background: #fffaf8;
+
+  border: 1px solid #e7d8d2;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* 코치 이름 */
+.instructor-profile-content h3 {
+  margin: 0 0 10px;
+
+  color: #24201e;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+/* 코치 전문 분야 */
+.instructor-profile-content strong {
+  display: block;
+  margin-bottom: 17px;
+
+  color: #b47885;
+  font-size: 15px;
+}
+
+/* 코치 경력 */
+.instructor-profile-content ul {
+  min-height: 118px;
+
+  /* 목록 전체를 카드 가운데에 배치 */
+  width: 190px;
+  margin: 0 auto 14px;
+
+  padding: 0;
+  list-style: none;
+
+  /* 목록 글자만 왼쪽 정렬 */
+  text-align: left;
+
+  color: #777;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* 경력 한 줄씩 정렬 */
+.instructor-profile-content li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 7px;
+}
+
+/* 경력 앞 점 */
+.instructor-profile-content li::before {
+  content: "•";
+  margin-right: 6px;
+  color: #c98996;
+}
+
+
+/* 코치 소개문 */
+.instructor-profile-content p {
+  margin: auto 0 0;
+  padding-top: 16px;
+
+  color: #6f6a67;
+  border-top: 1px solid #e8dfdb;
+
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+/* =========================
+   태블릿 화면
+========================= */
+
+@media (max-width: 1100px) {
+
+  .instructors-section {
+    padding: 52px 0;
+  }
+
+  .instructors-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .instructors-heading {
+    margin-bottom: 26px;
+  }
+
+  .instructors-heading h2 {
+    font-size: 38px;
+  }
+
+  .instructors-intro {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  /* 대표 강사 카드 */
+  .main-instructor-card {
+    margin-bottom: 24px;
+    padding: 26px 28px;
+  }
+
+  .main-instructor-content {
+    grid-template-columns: 285px minmax(0, 1fr);
+    column-gap: 30px;
+  }
+
+  .main-instructor-content h3 {
+    font-size: 31px;
+  }
+
+  .main-instructor-role {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+
+  .main-instructor-career {
+    min-width: 0;
+    padding: 11px 15px;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .main-instructor-description {
+    padding-left: 26px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* 아래 코치 카드 2개씩 */
+  .instructor-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .instructor-profile-content {
+    padding: 18px 20px 21px;
+  }
+
+  .instructor-profile-content ul {
+    width: min(100%, 220px);
+    min-height: 88px;
+  }
+}
+
+/* =========================
+   스마트폰 화면
+========================= */
+
+@media (max-width: 700px) {
+
+  .instructors-section {
+    padding: 42px 0;
+  }
+
+  .instructors-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .instructors-heading {
+    margin-bottom: 22px;
+  }
+
+  .instructors-small-title {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+
+  .instructors-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .instructors-intro {
+    margin-top: 9px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* 대표 강사 카드 */
+  .main-instructor-card {
+    margin-bottom: 18px;
+    padding: 22px 20px;
+
+    border-radius: 20px;
+  }
+
+  .main-instructor-content {
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "badge"
+      "name"
+      "role"
+      "career"
+      "description";
+
+    row-gap: 0;
+  }
+
+  .instructor-badge {
+    margin: 0 0 10px;
+    padding: 6px 13px;
+
+    font-size: 12px;
+  }
+
+  .main-instructor-content h3 {
+    margin: 0 0 5px;
+
+    font-size: 28px;
+  }
+
+  .main-instructor-role {
+    margin: 0 0 14px;
+
+    font-size: 15px;
+  }
+
+  .main-instructor-career {
+    width: 100%;
+    min-width: 0;
+
+    margin: 0 0 17px;
+    padding: 12px 15px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .main-instructor-description {
+    margin: 0;
+    padding: 17px 0 0;
+
+    border-top: 1px solid #eadcde;
+    border-left: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* 코치 카드 한 줄에 하나씩 */
+  .instructor-card-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .instructor-profile-card {
+    border-radius: 20px;
+  }
+
+  .instructor-profile-content {
+    padding: 18px 19px 20px;
+  }
+
+  .instructor-position {
+    margin-bottom: 7px;
+    padding: 5px 12px;
+  }
+
+  .instructor-profile-content h3 {
+    font-size: 21px;
+  }
+
+  .instructor-profile-content strong {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .instructor-profile-content ul {
+    width: min(100%, 230px);
+    min-height: auto;
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .instructor-profile-content li {
+    margin-bottom: 5px;
+  }
+
+  .instructor-profile-content p {
+    padding-top: 12px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* 사진을 넣은 코치 카드는 모바일에서도 사진 전체를 표시합니다. */
+@media (max-width: 700px) {
+  .instructor-profile-photo {
+    height: 360px;
+  }
+}
+
+/* =========================
+    수강생 후기
+========================= */
+
+/* 후기 전체 영역 */
+.reviews-section {
+  padding: 56px 0;
+
+  background: #eee9dd;
+}
+
+
+/* 후기 전체 너비 */
+.reviews-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* 후기 제목 영역 */
+.reviews-heading {
+  margin-bottom: 28px;
+}
+
+
+/* 작은 영문 제목 */
+.reviews-small-title {
+  margin: 0 0 7px;
+
+  color: #a6814f;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* 후기 큰 제목 */
+.reviews-heading h2 {
+  margin: 0;
+
+  color: #222;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+}
+
+
+/* 제목 아래 설명 */
+.reviews-intro {
+  margin: 10px 0 0;
+
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* 후기 슬라이더와 화살표를 감싸는 바깥 상자 */
+.review-slider-shell {
+  position: relative;
+
+  width: 100%;
+  padding: 0 64px;
+}
+
+/* 실제 후기 슬라이더 */
+.review-slider {
+  position: relative;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px 0 38px;
+
+  /* 이전·다음 카드 조각을 완전히 숨김 */
+  overflow: hidden;
+}
+
+/* 반복 슬라이드의 일부가 바깥으로 보이지 않도록 처리 */
+.review-slider .swiper-wrapper {
+  align-items: stretch;
+}
+
+.review-slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+}
+
+
+/* 후기 카드 */
+.review-card {
+  box-sizing: border-box;
+
+  width: 100%;
+  min-height: 205px;
+  height: auto;
+
+  padding: 26px 30px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(88, 68, 56, 0.08);
+  border-radius: 24px;
+
+  box-shadow: 0 12px 28px rgba(70, 50, 40, 0.06);
+}
+
+/* 카드 위쪽 별점과 강좌명 */
+.review-card-top {
+  margin-bottom: 12px;
+}
+
+/* 별점 */
+.review-stars {
+  color: #c99a48;
+
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+
+/* 수강 강좌 표시 */
+.review-course {
+  display: none;
+}
+
+/* 후기 내용 */
+.review-card blockquote {
+  width: 100%;
+  margin: 0;
+
+  color: #555;
+  font-size: 16px;
+  line-height: 1.65;
+
+  text-align: left;
+  word-break: keep-all;
+}
+
+/* 작성자 부분 */
+.review-author {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+
+  display: block;
+
+  border-top: 1px solid #eee7e1;
+  text-align: left;
+}
+
+/* 분홍색 원 숨김 */
+.review-author-mark {
+  display: none;
+}
+
+/* 수강생 이름 숨김 */
+.review-author strong {
+  display: none;
+}
+
+
+/* 직업만 표시 */
+.review-author span {
+  display: block;
+
+  margin: 0;
+
+  color: #555;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 페이지 표시 위치 */
+.review-slider .swiper-pagination {
+  bottom: 4px;
+}
+
+/* 선택되지 않은 페이지 점 */
+.review-slider .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+
+  background: #bfb2a4;
+  opacity: 0.45;
+}
+
+/* 현재 페이지 점 */
+.review-slider .swiper-pagination-bullet-active {
+  width: 25px;
+
+  background: #c98996;
+  border-radius: 10px;
+
+  opacity: 1;
+}
+
+/* 후기 좌우 화살표 공통 */
+.review-button {
+  position: absolute;
+  top: calc(50% - 18px);
+  z-index: 20;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #5b4a43;
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(115, 91, 78, 0.16);
+  border-radius: 50%;
+
+  box-shadow: 0 12px 28px rgba(63, 46, 38, 0.13);
+
+  font-size: 18px;
+  line-height: 1;
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* 왼쪽 화살표 */
+.review-button-prev {
+  left: 8px;
+}
+
+
+/* 오른쪽 화살표 */
+.review-button-next {
+  right: 8px;
+}
+
+
+/* 화살표에 마우스를 올렸을 때 */
+.review-button:hover {
+  color: var(--button-text);
+  background: var(--button-dark-hover);
+
+  box-shadow: 0 15px 32px rgba(51, 45, 41, 0.22);
+
+  transform:
+    translateY(-50%)
+    scale(1.05);
+}
+
+/* =========================
+   태블릿
+========================= */
+@media (max-width: 900px) {
+
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .reviews-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .reviews-heading {
+    margin-bottom: 24px;
+  }
+
+  .review-slider-shell {
+    padding: 0;
+  }
+
+  .review-slider {
+    width: 100%;
+    padding: 4px 0 34px;
+  }
+
+  .review-card {
+    min-height: 200px;
+  }
+
+  .review-button {
+    display: none;
+  }
+}
+
+/* =========================
+   스마트폰
+========================= */
+@media (max-width: 600px) {
+
+  .review-slider-shell {
+    padding: 0;
+  }
+
+  .review-slider {
+    width: 100%;
+    padding: 3px 0 32px;
+  }
+
+  /* 기존 스마트폰 후기 코드 계속 */
+}
+
+/* =========================
+   수강후기 작성 버튼
+========================= */
+
+.review-write-button {
+  margin-top: 20px;
+  padding: 12px 22px;
+
+  color: #ffffff;
+  background: #332d29;
+
+  border: 0;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.review-write-button:hover {
+  transform: translateY(-2px);
+  background: #4a403a;
+  box-shadow: 0 8px 18px rgba(51, 45, 41, 0.18);
+}
+
+
+/* =========================
+   수강후기 작성 팝업
+========================= */
+
+.review-write-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 6000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(35, 29, 26, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+
+/* 팝업이 열렸을 때 */
+.review-write-modal.is-open {
+  display: flex;
+}
+
+
+/* 실제 흰색 팝업 상자 */
+.review-write-modal-box {
+  position: relative;
+
+  width: min(560px, 100%);
+  max-height: calc(100vh - 60px);
+
+  padding: 36px 38px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+  border: 1px solid #eee4df;
+  border-radius: 24px;
+
+  box-shadow: 0 24px 70px rgba(50, 35, 30, 0.22);
+}
+
+
+/* 오른쪽 위 닫기 버튼 */
+.review-write-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #332d29;
+  background: transparent;
+
+  border: 0;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* 팝업 제목 */
+.review-write-heading {
+  margin-bottom: 28px;
+  padding-right: 45px;
+}
+
+.review-write-heading h2 {
+  margin: 5px 0 8px;
+
+  color: #26221f;
+
+  font-family: "Noto Serif KR", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.review-write-heading > p:last-child {
+  margin: 0;
+
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* 입력 항목 */
+.review-write-field {
+  margin-bottom: 20px;
+}
+
+.review-write-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #332d29;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* 선택창과 후기 입력창 */
+.review-write-field select,
+.review-write-field textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  color: #333;
+  background: #fffafa;
+
+  border: 1px solid #e7dcd7;
+  border-radius: 12px;
+
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+
+  outline: none;
+}
+
+
+/* 클릭했을 때 */
+.review-write-field select:focus,
+.review-write-field textarea:focus {
+  border-color: #c98996;
+  box-shadow: 0 0 0 3px rgba(201, 137, 150, 0.10);
+}
+
+
+/* 후기 입력창 */
+.review-write-field textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+
+/* 저장 결과 메시지 */
+.review-write-message {
+  min-height: 22px;
+  margin: 0 0 12px;
+
+  color: #9a6874;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* 후기 등록 버튼 */
+.review-write-submit {
+  width: 100%;
+
+  padding: 14px 20px;
+
+  color: #ffffff;
+  background: #332d29;
+
+  border: 0;
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.review-write-submit:hover {
+  background: #4a403a;
+}
+
+
+/* =========================
+   수강후기 작성 팝업 - 스마트폰
+========================= */
+
+@media (max-width: 600px) {
+
+  .review-write-modal {
+    padding: 16px;
+  }
+
+  .review-write-modal-box {
+    max-height: calc(100vh - 32px);
+
+    padding: 30px 22px 24px;
+
+    border-radius: 20px;
+  }
+
+  .review-write-heading h2 {
+    font-size: 27px;
+  }
+
+  .review-write-field select,
+  .review-write-field textarea {
+    font-size: 16px;
+  }
+
+}
+
+/* =========================
+   아카데미 장소
+========================= */
+
+/* 장소 전체 영역 */
+.location-section {
+  padding: 50px 0;
+  background: #fff8f9;
+}
+
+
+/* 전체 너비 */
+.location-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* 제목 영역 */
+.location-heading {
+  margin-bottom: 28px;
+}
+
+/* 작은 영문 제목 */
+.location-small-title {
+  margin: 0 0 7px;
+
+  color: #a6814f;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* 큰 제목 */
+.location-heading h2 {
+  margin: 0;
+
+  color: #222;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+}
+
+/* 제목 아래 문장 */
+.location-heading > p:last-child {
+  margin: 10px 0 0;
+
+  color: #777;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* 정보와 지도를 좌우로 배치 */
+.location-content {
+  display: grid;
+  grid-template-columns: minmax(0, 36fr) minmax(0, 64fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* 왼쪽 장소 정보 */
+.location-info {
+  min-height: 360px;
+  padding: 28px 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #eee5e2;
+  border-radius: 22px;
+
+  box-shadow: 0 10px 26px rgba(61, 42, 38, 0.05);
+}
+
+/* 작은 이름 표시 */
+.location-label {
+  display: inline-block;
+  align-self: flex-start;
+
+  margin-bottom: 12px;
+  padding: 6px 13px;
+
+  color: #9a6874;
+  background: #fff0f3;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.location-info h3 {
+  margin: 0 0 8px;
+
+  color: #222;
+  font-size: 27px;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+/* 간단한 소개 */
+.location-description {
+  margin: 0 0 20px;
+
+  color: #777;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* 주소·교통·시간 한 줄 */
+.location-item {
+  margin-bottom: 13px;
+  padding-bottom: 13px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-bottom: 1px solid #f3ece8;
+}
+
+.location-item:last-of-type {
+  margin-bottom: 14px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* 아이콘 */
+.location-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #fff2f4;
+  border: 1px solid #f3e2e6;
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+/* 항목 제목 */
+.location-item strong {
+  display: block;
+  margin-bottom: 2px;
+
+  color: #222;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 항목 설명 */
+.location-item p {
+  margin: 0;
+
+  color: #777;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* 길찾기 버튼 */
+.location-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+
+  margin-top: 4px;
+  padding: 10px 19px;
+
+  color: var(--button-text);
+  background: var(--button-dark);
+
+  border: 1px solid var(--button-dark);
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 18px rgba(51, 45, 41, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.location-button:hover {
+  transform: translateY(-2px);
+
+  background: var(--button-dark-hover);
+  box-shadow: 0 10px 24px rgba(51, 45, 41, 0.22);
+}
+
+/* 오른쪽 지도 바깥 상자 */
+.location-map {
+  width: 100%;
+  min-height: 360px;
+
+  overflow: hidden;
+
+  background: #f3f1ee;
+  border: 1px solid #eee5e2;
+  border-radius: 22px;
+
+  box-shadow: 0 10px 26px rgba(61, 42, 38, 0.05);
+}
+
+/* 실제 카카오 지도 */
+#kakao-map {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+}
+
+/* =========================
+   태블릿 화면
+========================= */
+
+@media (max-width: 900px) {
+
+  .location-section {
+    padding: 50px 0;
+  }
+
+  .location-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .location-heading {
+    margin-bottom: 24px;
+  }
+
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .location-info {
+    min-height: auto;
+    padding: 30px 32px;
+  }
+
+  .location-map,
+  #kakao-map {
+    min-height: 350px;
+  }
+}
+
+/* =========================
+   스마트폰 화면
+========================= */
+
+@media (max-width: 600px) {
+
+  .location-section {
+    padding: 42px 0;
+  }
+
+  .location-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .location-heading {
+    margin-bottom: 20px;
+  }
+
+  .location-heading h2 {
+    font-size: 30px;
+  }
+
+  .location-heading > p:last-child {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .location-content {
+    gap: 15px;
+  }
+
+  .location-info {
+    min-height: auto;
+    padding: 26px 22px;
+    border-radius: 20px;
+  }
+
+  .location-info h3 {
+    font-size: 25px;
+  }
+
+  .location-description {
+    margin-bottom: 18px;
+  }
+
+  .location-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    gap: 12px;
+  }
+
+  .location-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .location-button {
+    padding: 10px 18px;
+  }
+
+  .location-map {
+    border-radius: 20px;
+  }
+
+  .location-map,
+  #kakao-map {
+    min-height: 280px;
+  }
+}
+
+/* =========================
+   푸터
+========================= */
+
+.footer {
+  padding: 24px 0 14px;
+
+  color: white;
+  background: #332d29;
+}
+
+/* 푸터 위쪽 3칸 배치 */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr 0.6fr;
+
+  gap: 22px;
+  align-items: start;
+}
+
+/* 왼쪽 로고 */
+.footer-logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* 왼쪽 소개 문장 */
+.footer-brand p {
+  margin: 8px 0 0;
+
+  color: #d1c9c4;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* 가운데 안내 제목 */
+.footer-contact h2 {
+  margin: 0 0 10px;
+
+  color: white;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* 가운데 안내 문장 */
+.footer-contact p {
+  margin: 0 0 12px;
+
+  color: #d1c9c4;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 가운데 수강신청 버튼 */
+.footer-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  min-width: 0;
+
+  padding: 8px 17px;
+
+  color: #332d29;
+  background: #fff8f1;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.footer-contact-button:hover {
+  transform: translateY(-2px);
+  background: var(--button-light-hover);
+}
+
+/* 오른쪽 바로가기 제목 */
+.footer-menu h2 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+}
+
+/* 바로가기 목록 */
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* 바로가기 한 줄 */
+.footer-menu li {
+  margin-bottom: 4px;
+}
+
+/* 바로가기 글자 */
+.footer-menu a {
+  color: #f2ece8;
+  font-size: 14px;
+}
+
+
+/* 푸터 맨 아래 */
+.footer-bottom {
+  margin-top: 14px;
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #aaa;
+  font-size: 15px;
+}
+
+/* 개인정보처리방침·이용약관 */
+.footer-bottom a {
+  margin-right: 12px;
+}
+
+/* 주소 */
+.footer-bottom address {
+  margin: 5px 0;
+
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* 위로 가기 버튼 */
+.top-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   푸터 제목 높이 맞추기
+========================= */
+.footer-brand,
+.footer-contact,
+.footer-menu{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+
+/* =========================
+   태블릿·스마트폰
+========================= */
+
+/* 태블릿 화면 */
+@media (max-width: 1000px) {
+
+  .main-menu,
+  .login-button {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .hero-slide {
+    grid-template-columns: 1fr;
+  }
+
+/* 태블릿 메인 사진 */
+.hero-image {
+  width: 330px;
+  height: 460px;
+}
+
+.hero-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 430px;
+}
+
+  .course-grid,
+  .teacher-grid,
+  .notice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 태블릿 푸터 */
+  .footer {
+    padding: 28px 0 18px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footer-menu {
+    grid-column: 1 / -1;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  .footer-menu li {
+    margin-bottom: 0;
+  }
+
+  .footer-bottom {
+    margin-top: 18px;
+    padding-top: 11px;
+  }
+}
+
+
+/* 스마트폰 화면 */
+@media (max-width: 700px) {
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .hero-slide {
+    padding: 35px 25px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 36px;
+  }
+
+/* 스마트폰 메인 사진 */
+.hero-image {
+  width: min(310px, 90vw);
+  height: 430px;
+
+  padding: 10px;
+}
+
+.hero-image img {
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 405px;
+}
+
+  /* 스마트폰 푸터 */
+  .footer {
+    padding: 26px 0 18px;
+  }
+
+  .footer-inner {
+    gap: 20px;
+  }
+
+  .footer-menu {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    font-size: 18px;
+  }
+
+  .footer-brand p {
+    margin-top: 6px;
+    font-size: 13px;
+  }
+
+  .footer-contact h2,
+  .footer-menu h2 {
+    font-size: 17px;
+  }
+
+  .footer-contact p {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .footer-contact-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+
+  .footer-menu li {
+    margin-bottom: 0;
+  }
+
+  .footer-menu a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    margin-top: 16px;
+    padding-top: 10px;
+    font-size: 11px;
+  }
+
+  .footer-bottom address {
+    margin: 7px 0;
+  }
+
+.course-grid,
+.teacher-grid,
+.notice-grid {
+  grid-template-columns: 1fr;
+}
+
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter-form input {
+    width: 220px;
+  }
+}
+
+
+/* 메인 슬라이드 화살표 숨기기 */
+.hero-slider .swiper-button-next,
+.hero-slider .swiper-button-prev {
+  display: none;
+}
+
+/* =========================
+   음악 ON / OFF 버튼
+========================= */
+
+.music-button {
+  position: fixed;
+
+  right: 24px;
+  bottom: 90px;
+
+  z-index: 2000;
+
+  height: 46px;
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #332d29;
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(51, 45, 41, 0.14);
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 24px rgba(51, 45, 41, 0.14);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* 마우스를 올렸을 때 */
+.music-button:hover {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+  background: #4a403a;
+}
+
+
+/* 음악이 재생되고 있을 때 */
+.music-button.is-playing {
+  color: #ffffff;
+  background: #332d29;
+}
+
+
+/* 음표 */
+.music-icon {
+  font-size: 18px;
+}
+
+/* =========================
+   음악 버튼 - 스마트폰 전용
+========================= */
+
+@media (max-width: 700px) {
+
+  .music-button {
+    right: 15px;
+    bottom: 76px;
+
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  .music-text {
+    display: none;
+  }
+
+  .music-icon {
+    font-size: 20px;
+  }
+
+}
+
+/* =========================
+   수강신청 팝업
+========================= */
+
+/* 화면 전체를 덮는 어두운 배경 */
+.apply-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(36, 31, 28, 0.58);
+
+  overflow-y: auto;
+}
+
+
+/* 팝업이 열렸을 때 */
+.apply-modal.is-open {
+  display: flex;
+}
+
+
+/* 실제 신청서 흰색 상자 */
+.apply-modal-box {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 92vh;
+
+  padding: 48px 52px;
+
+  overflow-y: auto;
+
+  background: #fffdfc;
+
+  border: 1px solid #eadfd8;
+  border-radius: 26px;
+
+  box-shadow:
+    0 28px 70px rgba(51, 45, 41, 0.22);
+}
+
+
+/* 오른쪽 위 X 버튼 */
+.apply-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #332d29;
+  background: #ffffff;
+
+  border: 1px solid #e8dfda;
+  border-radius: 50%;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* X 버튼에 마우스를 올렸을 때 */
+.apply-close:hover {
+  transform: rotate(90deg);
+
+  background: #fff8f1;
+}
+
+
+/* =========================
+   신청서 제목
+========================= */
+
+.apply-heading {
+  margin-bottom: 32px;
+
+  text-align: center;
+}
+
+
+/* 작은 수강신청 글자 */
+.apply-small-title {
+  margin: 0 0 8px;
+
+  color: #a6814f;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+
+/* 큰 제목 */
+.apply-heading h2 {
+  margin: 0 0 12px;
+
+  color: #292522;
+
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: -1.4px;
+
+  word-break: keep-all;
+}
+
+
+/* 제목 아래 설명 */
+.apply-heading > p:last-child {
+  margin: 0;
+
+  color: #77706c;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   신청서 입력칸
+========================= */
+
+/* 이름·연락처 등 2칸 배치 */
+.apply-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px 20px;
+}
+
+
+/* 각각의 입력 항목 */
+.apply-field {
+  margin-bottom: 19px;
+}
+
+
+/* 항목 이름 */
+.apply-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #332d29;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* 입력창 공통 */
+.apply-field input,
+.apply-field select,
+.apply-field textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  color: #333;
+  background: #faf8f7;
+
+  border: 1px solid #e3dcd8;
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* 입력창 안쪽 안내문 색상 */
+.apply-field input::placeholder,
+.apply-field textarea::placeholder {
+  color: #aaa29e;
+}
+
+
+/* 입력창을 클릭했을 때 */
+.apply-field input:focus,
+.apply-field select:focus,
+.apply-field textarea:focus {
+  background: #ffffff;
+
+  border-color: #a6814f;
+
+  box-shadow:
+    0 0 0 3px rgba(166, 129, 79, 0.10);
+}
+
+
+/* 긴 글 입력창 */
+.apply-field textarea {
+  min-height: 115px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   개인정보 동의
+========================= */
+
+.apply-agree {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin: 2px 0 22px;
+
+  color: #6c6561;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+.apply-agree input {
+  width: 17px;
+  height: 17px;
+
+  margin-top: 2px;
+
+  flex-shrink: 0;
+
+  accent-color: #332d29;
+}
+
+
+/* =========================
+   최종 수강신청 버튼
+========================= */
+
+.apply-submit {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  color: var(--button-text);
+  background: var(--button-dark);
+
+  border: 1px solid var(--button-dark);
+  border-radius: 13px;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(51, 45, 41, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* 신청 버튼에 마우스를 올렸을 때 */
+.apply-submit:hover {
+  transform: translateY(-2px);
+
+  background: var(--button-dark-hover);
+
+  box-shadow:
+    0 11px 24px rgba(51, 45, 41, 0.22);
+}
+
+
+/* =========================
+   수강신청 팝업 - 태블릿
+========================= */
+
+@media (max-width: 900px) {
+
+  .apply-modal {
+    padding: 20px;
+  }
+
+  .apply-modal-box {
+    width: min(720px, 100%);
+
+    padding: 45px 38px 38px;
+  }
+
+  .apply-heading h2 {
+    font-size: 30px;
+  }
+
+}
+
+
+/* =========================
+   수강신청 팝업 - 스마트폰
+========================= */
+
+@media (max-width: 600px) {
+
+  .apply-modal {
+    align-items: flex-start;
+
+    padding: 12px;
+  }
+
+
+  .apply-modal-box {
+    width: 100%;
+    max-height: calc(100vh - 24px);
+
+    padding: 44px 18px 24px;
+
+    border-radius: 20px;
+  }
+
+
+  .apply-close {
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 23px;
+  }
+
+
+  .apply-heading {
+    margin-bottom: 25px;
+  }
+
+
+  .apply-heading h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+
+  .apply-heading > p:last-child {
+    font-size: 13px;
+  }
+
+
+  /* 스마트폰에서는 한 줄에 하나 */
+  .apply-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .apply-field {
+    margin-bottom: 15px;
+  }
+
+
+  .apply-field label {
+    font-size: 13px;
+  }
+
+
+  /*
+    스마트폰에서 글자를 너무 작게 하면
+    아이폰이 화면을 자동 확대할 수 있으므로
+    입력창 글자를 16px로 둡니다.
+  */
+  .apply-field input,
+  .apply-field select,
+  .apply-field textarea {
+    padding: 13px 14px;
+
+    font-size: 16px;
+
+    border-radius: 11px;
+  }
+
+
+  .apply-field textarea {
+    min-height: 105px;
+  }
+
+
+  .apply-agree {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+  }
+
+
+  .apply-submit {
+    padding: 14px 18px;
+
+    font-size: 15px;
+  }
+
+}
+
+/* =========================
+   홈페이지 글자 디자인 통일
+========================= */
+
+/* 전체 기본 글자 */
+body {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  color: #2d2926;
+}
+
+
+/* =========================
+   큰 제목 전용
+   고급스러운 명조체
+========================= */
+.section-title h2,
+.section-heading h2,
+.gallery-heading h2,
+.instructors-heading h2,
+.reviews-heading h2,
+.location-heading h2,
+.apply-heading h2 {
+  font-family: "Noto Serif KR", serif;
+
+  font-weight: 700;
+  letter-spacing: -1.5px;
+
+  color: #26221f;
+
+  word-break: keep-all;
+}
+
+/* 메인 첫 화면 제목 - 깔끔한 고딕체 */
+.hero-text h1,
+.hero-text h2 {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+
+  font-size: clamp(44px, 4vw, 54px);
+  line-height: 1.22;
+  letter-spacing: -2px;
+}
+
+/* 일반 섹션 큰 제목 */
+.section-title h2,
+.section-heading h2,
+.gallery-heading h2,
+.instructors-heading h2,
+.reviews-heading h2,
+.location-heading h2 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+
+/* =========================
+   작은 영문 제목
+========================= */
+
+.small-title,
+.instructors-small-title,
+.reviews-small-title,
+.location-small-title,
+.apply-small-title {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+
+  color: #a6814f;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   메뉴
+========================= */
+
+.main-menu a,
+.search-button,
+.login-button {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  color: #37322f;
+}
+
+
+/* =========================
+   로고
+========================= */
+
+.logo span {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+.logo small {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0;
+
+  color: #9b7d56;
+}
+
+
+/* =========================
+   본문 설명
+========================= */
+
+.hero-description,
+.about-text,
+.gallery-intro,
+.instructors-intro,
+.reviews-intro,
+.location-heading > p:last-child {
+  font-family: "Pretendard", sans-serif;
+
+  font-weight: 400;
+
+  color: #68615c;
+
+  letter-spacing: -0.25px;
+}
+
+
+/* 메인 설명 */
+.hero-description {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   추천강좌 카드 제목
+========================= */
+
+.course-content h3 {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.45;
+  letter-spacing: -0.6px;
+
+  color: #2b2724;
+
+  word-break: keep-all;
+}
+
+
+/* 카드 설명 */
+.course-content p {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: #77706c;
+}
+
+
+/* =========================
+   문화갤러리
+========================= */
+
+.gallery-content h3 {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: -0.5px;
+}
+
+.gallery-description,
+.gallery-question {
+  font-family: "Pretendard", sans-serif;
+}
+
+
+/* =========================
+   강사진
+========================= */
+
+.main-instructor-content h3,
+.instructor-profile-content h3 {
+  font-family: "Noto Serif KR", serif;
+
+  font-weight: 700;
+
+  color: #292522;
+}
+
+.main-instructor-content h3 {
+  font-size: 31px;
+}
+
+.instructor-profile-content h3 {
+  font-size: 21px;
+}
+
+
+/* 강사진 경력과 설명 */
+.main-instructor-career,
+.main-instructor-description,
+.instructor-profile-content ul,
+.instructor-profile-content p {
+  font-family: "Pretendard", sans-serif;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================
+   후기
+========================= */
+
+.review-card blockquote {
+  font-family: "Pretendard", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  letter-spacing: -0.25px;
+
+  color: #5e5753;
+}
+
+.review-author span {
+  font-family: "Pretendard", sans-serif;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   버튼
+========================= */
+
+.primary-button,
+.outline-button,
+.apply-button,
+.location-button,
+.footer-contact-button,
+.apply-submit {
+  font-family: "Pretendard", sans-serif;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================
+   수강신청 팝업
+========================= */
+
+.apply-field label {
+  font-family: "Pretendard", sans-serif;
+
+  font-weight: 700;
+}
+
+.apply-field input,
+.apply-field select,
+.apply-field textarea {
+  font-family: "Pretendard", sans-serif;
+}
+
+/* ==================================================
+   ★ 반응형 최종 관리 구역
+   앞으로 태블릿·스마트폰 수정은 여기서만 합니다.
+================================================== */
+
+
+/* ==================================================
+   1. 태블릿
+   화면이 1000px 이하일 때
+================================================== */
+
+@media (max-width: 1000px) {
+
+  /* ---------- 메인 ---------- */
+
+  .hero-slide {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-text {
+    justify-self: center;
+  }
+
+  .hero-image {
+    width: fit-content;
+    height: auto;
+    padding: 12px;
+  }
+
+  .hero-image img {
+    width: auto;
+    height: auto;
+
+    max-width: min(330px, 80vw);
+    max-height: 470px;
+
+    object-fit: contain;
+  }
+
+
+  /* ---------- 추천강좌 ---------- */
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* ---------- 문화갤러리 ---------- */
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+
+  /* ---------- 강사진 ---------- */
+
+  .instructor-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* ---------- 수강생 후기 ---------- */
+
+  .reviews-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .review-button {
+    display: none;
+  }
+
+
+  /* ---------- 오시는 길 ---------- */
+
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- 수강신청 팝업 ---------- */
+
+  .apply-modal-box {
+    width: min(720px, 100%);
+  }
+
+}
+
+
+
+/* ==================================================
+   2. 스마트폰
+   화면이 700px 이하일 때
+================================================== */
+
+@media (max-width: 700px) {
+
+  /* ---------- 홈페이지 공통 ---------- */
+
+  .section {
+    padding: 44px 0;
+  }
+
+
+  /* ---------- 메인 ---------- */
+
+  .hero-slide {
+    grid-template-columns: 1fr;
+
+    padding: 32px 20px;
+    gap: 26px;
+  }
+
+  .hero-text {
+    justify-self: center;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .hero-image {
+    width: fit-content;
+    height: auto;
+
+    padding: 10px;
+  }
+
+  .hero-image img {
+    width: auto;
+    height: auto;
+
+    max-width: min(290px, 84vw);
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+
+  /* ---------- 추천강좌 ---------- */
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- 문화갤러리 ---------- */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 30px;
+  }
+
+
+  /* ---------- 강사진 ---------- */
+
+  .instructor-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instructors-heading h2 {
+    font-size: 30px;
+  }
+
+
+  /* ---------- 수강생 후기 ---------- */
+
+  .reviews-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .review-button {
+    display: none;
+  }
+
+
+  /* ---------- 오시는 길 ---------- */
+
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+  .location-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .location-heading h2 {
+    font-size: 30px;
+  }
+
+
+  /* ---------- 수강신청 팝업 ---------- */
+
+  .apply-modal {
+    padding: 12px;
+  }
+
+  .apply-modal-box {
+    width: 100%;
+
+    padding: 44px 18px 24px;
+
+    border-radius: 20px;
+  }
+
+  .apply-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- 음악 버튼 ---------- */
+
+  .music-button {
+    right: 15px;
+    bottom: 76px;
+
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  .music-text {
+    display: none;
+  }
+
+}
+
+/* ==================================================
+   홈페이지 검색창
+================================================== */
+
+/* 검색창 전체 영역 - 처음에는 숨김 */
+.site-search-box {
+  position: fixed;
+
+  top: 82px;
+  left: 0;
+
+  z-index: 3000;
+
+  width: 100%;
+
+  padding: 22px 20px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom: 1px solid rgba(80, 60, 50, 0.10);
+
+  box-shadow:
+    0 12px 30px rgba(51, 45, 41, 0.10);
+
+  /* 처음에는 안 보이게 */
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* 검색 버튼을 눌렀을 때 나타남 */
+.site-search-box.is-open {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* 검색창 안쪽 */
+.site-search-inner {
+  width: min(700px, calc(100% - 30px));
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* 검색어 입력칸 */
+#site-search-input {
+  flex: 1;
+
+  height: 50px;
+
+  padding: 0 20px;
+
+  color: #292522;
+  background: #fff;
+
+  border: 1px solid #ddd2cc;
+  border-radius: 25px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* 검색 입력칸을 눌렀을 때 */
+#site-search-input:focus {
+  border-color: #a6814f;
+
+  box-shadow:
+    0 0 0 3px rgba(166, 129, 79, 0.10);
+}
+
+
+/* 입력창 안의 안내 글자 */
+#site-search-input::placeholder {
+  color: #a39b96;
+}
+
+
+/* 검색 실행 버튼 */
+#site-search-submit {
+  height: 50px;
+
+  padding: 0 23px;
+
+  color: #fff;
+  background: #332d29;
+
+  border: 0;
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* 검색 실행 버튼에 마우스를 올렸을 때 */
+#site-search-submit:hover {
+  background: #4a403a;
+}
+
+
+/* X 닫기 버튼 */
+#site-search-close {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #625d59;
+  background: transparent;
+
+  border: 0;
+
+  font-size: 28px;
+  line-height: 1;
+}
+
+
+/* X에 마우스를 올렸을 때 */
+#site-search-close:hover {
+  color: #222;
+}
+
+
+/* ==================================================
+   검색창 스마트폰
+================================================== */
+
+@media (max-width: 700px) {
+
+  .site-search-box {
+    top: 82px;
+
+    padding: 16px 10px;
+  }
+
+  .site-search-inner {
+    width: 100%;
+    gap: 7px;
+  }
+
+  #site-search-input {
+    min-width: 0;
+
+    height: 46px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+  }
+
+  #site-search-submit {
+    height: 46px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
+
+  #site-search-close {
+    width: 38px;
+    height: 38px;
+
+    font-size: 25px;
+  }
+
+}
+
+/* =========================
+   회원 로그인 팝업
+========================= */
+
+.login-modal {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+
+/* 로그인 창이 열렸을 때 */
+.login-modal.is-open {
+  display: flex;
+}
+
+
+/* 흰색 로그인 상자 */
+.login-modal-box {
+  position: relative;
+
+  width: 100%;
+  max-width: 460px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 45px 40px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+/* 닫기 X 버튼 */
+.login-close {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* 제목 */
+.login-heading {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+
+.login-heading h2 {
+  margin: 8px 0 10px;
+
+  font-size: 30px;
+}
+
+
+/* 이메일 / 비밀번호 영역 */
+.login-field {
+  margin-bottom: 18px;
+}
+
+
+.login-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 700;
+}
+
+
+/* 입력창 */
+.login-field input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* 입력창을 눌렀을 때 */
+.login-field input:focus {
+  outline: none;
+
+  border-color: #333333;
+}
+
+
+/* 로그인 버튼 */
+.login-submit {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: #222222;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 5px;
+}
+
+
+/* 회원가입 버튼 */
+.signup-button {
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 13px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+
+/* 로그인 결과 안내 */
+.login-message {
+  min-height: 22px;
+
+  margin-top: 15px;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+/* =========================
+   위로 가기 버튼 보이기 / 숨기기
+========================= */
+
+.top-button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.top-button.is-show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* ============================================================
+   소울아카데미: 메인 이미지와 배경을 자연스럽게 연결
+   기존 HTML/사진/다른 섹션은 그대로 유지합니다.
+============================================================ */
+.hero {
+  background: #fffafa;
+  background-image: none;
+}
+.hero::before {
+  display: none;
+}
+.hero-image,
+.hero-image:hover {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  /* 왼쪽 가장자리가 흰 배경으로 부드럽게 사라지도록 */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 19%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 19%, #000 100%);
+}
+.hero-image:hover img {
+  transform: none;
+}
+@media (max-width: 1000px) {
+  .hero-image {
+    width: min(620px, 100%);
+    height: auto;
+    padding: 0;
+  }
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+}
+@media (max-width: 700px) {
+  .hero-image {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .hero-image img {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+}
+
+
+/* 소울아카데미 단일 배너: 기존 메인 2단 구조 대신 이미지 한 장 전체 표시 */
+.soul-hero { padding: 0 !important; background: #fffafa !important; background-image: none !important; overflow: hidden; }
+.soul-hero::before { display: none !important; }
+.soul-hero-banner { display: block; width: 100%; height: auto; max-width: none; object-fit: contain; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+
+
+/* 네이버 지도 연결 패널 — 기존 지도 영역과 크기 및 둥근 모서리 유지 */
+.naver-map-panel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 28px;
+  text-align: center;
+  background: #f3f1ee;
+  color: #252321;
+  transition: background .2s ease;
+}
+.naver-map-panel:hover { background: #eae7e2; }
+.naver-map-symbol {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  color: white;
+  background: #03c75a;
+  font-size: 27px;
+  font-weight: 900;
+}
+.naver-map-panel-title { font-size: 21px; font-weight: 800; }
+.naver-map-panel-address { font-size: 17px; line-height: 1.5; }
+.naver-map-panel-action { font-size: 17px; font-weight: 750; text-decoration: underline; text-underline-offset: 4px; }
+.naver-map-panel-note { font-size: 14px; color: #726d68; }
+
+
+/* 코치 사진: 인물 크기는 유지하고 좌우/상하 빈 곳만 사진의 부드러운 확장 배경으로 채웁니다. */
+.instructor-photo-frame {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  background: #f7f5f8;
+  flex-shrink: 0;
+}
+.instructor-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: -1;
+  background-image: var(--portrait-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(19px);
+  opacity: 0.65;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+.instructor-photo-frame .instructor-profile-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+@media (max-width: 700px) {
+  .instructor-photo-frame { height: 360px; }
+}
+
+
+/* 김도현 대표 강사 사진: 기존 2열 소개 카드 구조 유지 */
+.main-instructor-content {
+  grid-template-areas:
+    "badge description"
+    "name description"
+    "role description"
+    "portrait description"
+    "career description";
+}
+.main-instructor-photo-frame {
+  grid-area: portrait;
+  width: min(100%, 290px);
+  height: 270px;
+  margin: 4px 0 18px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f7f5f8;
+}
+.main-instructor-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+@media (max-width: 700px) {
+  .main-instructor-content {
+    grid-template-areas: "badge" "name" "role" "portrait" "career" "description";
+  }
+  .main-instructor-photo-frame {
+    width: min(100%, 320px);
+    height: 300px;
+    margin-bottom: 18px;
+  }
+}
+
+
+/* =========================
+   소울아카데미 대표 소개 - 강사진 앞에 새 섹션
+   기존 색상/폰트 톤 유지, 반응형 대응
+========================= */
+.soul-director-section {
+  padding: 76px 0 62px;
+  background: #fff8f9;
+}
+.soul-director-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.soul-director-heading { margin: 0 0 26px; }
+.soul-director-heading h2 {
+  margin: 0;
+  color: #2b2625;
+  font-size: clamp(30px, 3.2vw, 40px);
+  letter-spacing: -1.3px;
+}
+.soul-director-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(20px, 3.5vw, 42px);
+  background: #fff;
+  border: 1px solid #eee4e3;
+  border-radius: 25px;
+  box-shadow: 0 12px 36px rgba(70, 45, 39, .06);
+}
+.soul-director-portrait {
+  position: relative;
+  align-self: stretch;
+  min-height: 500px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 19px;
+  background: #f3f0f1;
+}
+.soul-director-portrait img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  object-position: center;
+}
+.soul-director-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 54px 25px 22px;
+  background: linear-gradient(transparent, rgba(35, 29, 33, .72));
+  color: #fff;
+}
+.soul-director-caption small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  opacity: .92;
+}
+.soul-director-caption strong { font-size: 25px; letter-spacing: -.6px; }
+.soul-director-text { min-width: 0; }
+.soul-director-eyebrow {
+  margin: 0 0 9px;
+  color: #a47d4d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+.soul-director-text h3 {
+  margin: 0 0 22px;
+  color: #2c2928;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.4;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.soul-director-text p {
+  margin: 0 0 16px;
+  color: #615b58;
+  font-size: 16px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+.soul-director-text p.soul-director-greeting {
+  color: #33302f;
+  font-weight: 750;
+}
+.soul-director-quote {
+  margin: 25px 0 17px;
+  padding: 17px 20px;
+  border-left: 3px solid #b98e99;
+  border-radius: 0 12px 12px 0;
+  background: #fff5f7;
+  color: #704d58;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.7;
+}
+.soul-director-signature {
+  margin-top: 18px;
+  text-align: right;
+  color: #635a56;
+  font-size: 14px;
+}
+.soul-director-signature strong { color: #272322; font-size: 18px; }
+@media (max-width: 850px) {
+  .soul-director-card { grid-template-columns: 1fr; gap: 28px; }
+  .soul-director-portrait { width: min(100%, 520px); min-height: 460px; justify-self: center; }
+}
+@media (max-width: 520px) {
+  .soul-director-section { padding: 52px 0; }
+  .soul-director-card { padding: 16px; border-radius: 20px; }
+  .soul-director-portrait { min-height: 360px; }
+  .soul-director-text p { font-size: 15px; }
+}
+
+
+/* 소울아카데미: 지도 영역에 지도를 즉시 표시합니다. */
+.location-map { position: relative; }
+.soul-map-embed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border: 0;
+  background: #f3f1ee;
+}
+.soul-map-naver-link {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  padding: 11px 17px;
+  border-radius: 999px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(0,0,0,.16);
+}
+.soul-map-naver-link:hover { background: #f5f5f5; }
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       1. 상단 메뉴
+  ========================== -->
+  <header class="header">
+    <div class="header-inner">
+
+      <!-- 로고 -->
+      <a href="#home" class="logo">
+        <span>SOUL</span>
+        <small>Academy</small>
+      </a>
+
+      <!-- PC 메뉴 -->
+      <nav class="main-menu" aria-label="주요 메뉴">
+        <ul>
+          <li><a href="#about">아카데미 소개</a></li>
+          <li><a href="#courses">추천강좌</a></li>
+          <li><a href="#gallery">문화갤러리</a></li>
+          <li><a href="#director">대표 소개</a></li>
+          <li><a href="#teachers">강사진</a></li>
+          <li><a href="#location">오시는 길</a></li>
+        </ul>
+      </nav>
+
+      <!-- 오른쪽 메뉴 -->
+      <div class="header-buttons">
+        <button
+          type="button"
+          class="search-button"
+          id="search-open-button"
+          aria-label="검색창 열기"
+        >
+       검색
+      </button>
+
+        <button
+          type="button"
+          class="login-button"
+          id="login-open-button"
+        >
+           로그인
+      </button>
+
+<button
+  type="button"
+  class="logout-button"
+  id="logout-button"
+  style="display:none;"
+>
+  로그아웃
+</button>
+
+        <a href="#" class="apply-button apply-open">수강신청</a>
+
+        <!-- 모바일 메뉴 버튼 -->
+        <button
+          type="button"
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="모바일 메뉴 열기"
+        >
+          ☰
+        </button>
+      </div>
+
+    </div>
+
+    <!-- 모바일 메뉴 -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about">아카데미 소개</a></li>
+        <li><a href="#courses">추천강좌</a></li>
+        <li><a href="#gallery">문화갤러리</a></li>
+        <li><a href="#director">대표 소개</a></li>
+        <li><a href="#teachers">강사진</a></li>
+        <li><a href="#location">오시는 길</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- =========================
+     홈페이지 검색창
+========================= -->
+
+<div class="site-search-box" id="site-search-box">
+
+  <div class="site-search-inner">
+
+    <input
+      type="search"
+      id="site-search-input"
+      placeholder="무엇을 찾고 계신가요?"
+      aria-label="홈페이지 검색"
+    >
+
+    <button
+      type="button"
+      id="site-search-submit"
+    >
+      검색
+    </button>
+
+    <button
+      type="button"
+      id="site-search-close"
+      aria-label="검색창 닫기"
+    >
+      ×
+    </button>
+
+  </div>
+
+</div>
+
+  <main>
+
+    <!-- =========================
+         2. 메인 슬라이드
+    ========================== -->
+    <section class="hero soul-hero" id="home" aria-label="소울아카데미 메인 배너">
+      <!-- images 폴더 안의 포스터.jpg를 배너 전체에 표시합니다. -->
+      <img class="soul-hero-banner" src="images/포스터.jpg"
+           alt="소울아카데미 메인 포스터">
+    </section>
+
+
+    <!-- =========================
+         3. 아카데미 소개
+    ========================== -->
+    <section class="about section" id="about">
+      <div class="container about-inner">
+
+        <div class="section-title">
+          <p class="small-title">MEET MYSELF</p>
+
+          <h2>
+            지금, 나를 돌아볼 시간<br>
+            바쁜 일상과 익숙한 회피를 넘어<br>
+            진짜 나를 만나는 배움의 시작
+          </h2>
+        </div>
+
+        <div class="about-text">
+          <p>
+            우리는 수많은 정보와 자극 속에서 살아가지만,<br>
+            정작 나 자신을 마주할 시간은 점점 잃어가고 있습니다.
+          </p>
+
+          <p>
+            잠시 멈추어 나의 생각과 마음을 들여다보고,<br>
+            진솔하게 나를 마주하는 시간
+          </p>
+
+          <p>
+            <strong>나를 이해하는 깊이만큼, 삶을 바라보는 시선도 달라집니다.</strong>
+          </p>
+
+          <p>
+            소울아카데미는 진정한 나를 발견하고,<br>
+            새로운 삶의 방향을 찾아가는 배움의 공간입니다.
+          </p>
+
+          <a href="#courses" class="arrow-link">
+            프로그램 살펴보기 →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         4. 추천강좌
+    ========================== -->
+    <section class="courses section" id="courses">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="small-title">RECOMMENDED CLASSES</p>
+            <h2>추천강좌</h2>
+          </div>
+
+          <a href="#" class="arrow-link">
+            전체 강좌 보기 →
+          </a>
+        </div>
+
+        <div class="course-grid">
+
+          <!-- 강좌 1 -->
+          <article class="course-card">
+            <a href="#" class="course-image">
+              <img
+                src="images/강의사진.jpg"
+                alt="성경 강좌 수업 현장"
+              >
+            </a>
+
+            <div class="course-content">
+              <div class="course-tags">
+                <span>인문학</span>
+                <span>초보 가능</span>
+              </div>
+
+              <h3>
+                <a href="#">삶을 깨우는 바이블 클래스</a>
+              </h3>
+
+              <p>
+                한 문장의 울림을 통해<br>
+                내 삶의 방향을 돌아봅니다.
+              </p>
+          </div>
+          </article>
+
+          <!-- 강좌 2: 테스트 사진 경로 images/아로마테라피.jpg -->
+          <article class="course-card">
+            <a href="#" class="course-image">
+              <img
+                src="images/아로마테라피.jpg"
+                alt="아로마 오일과 식물"
+              >
+            </a>
+
+            <div class="course-content">
+              <div class="course-tags">
+                <span>웰니스</span>
+                <span>재료 포함</span>
+              </div>
+
+              <h3>
+                <a href="#">나를 돌보는 아로마 테라피</a>
+              </h3>
+
+              <p>
+                향기를 활용해 몸과 마음에<br>
+                편안한 쉼을 선물합니다.
+              </p>
+          </div>
+          </article>
+
+          <!-- 강좌 3 -->
+          <article class="course-card">
+            <a href="#" class="course-image">
+              <img
+                src="images/비즈공예.jpg"
+                alt="손으로 만드는 비즈공예"
+              >
+            </a>
+
+            <div class="course-content">
+              <div class="course-tags">
+                <span>공예</span>
+                <span>소수정원</span>
+              </div>
+
+              <h3>
+                <a href="#">반짝이는 하루, 비즈공예</a>
+              </h3>
+
+              <p>
+                작은 구슬을 엮으며<br>
+                집중과 성취의 기쁨을 느껴보세요.
+              </p>
+          </div>
+          </article>
+
+          <!-- 강좌 4 -->
+          <article class="course-card">
+            <a href="#" class="course-image">
+              <img
+                src="images/트레킹.jpg"
+                alt="숲길을 걷는 사람들"
+              >
+            </a>
+
+            <div class="course-content">
+              <div class="course-tags">
+                <span>건강</span>
+                <span>야외활동</span>
+              </div>
+
+              <h3>
+                <a href="#">자연과 함께 걷는 트레킹</a>
+              </h3>
+
+              <p>
+                계절의 풍경 속에서<br>
+                몸과 마음의 활력을 회복합니다.
+              </p>
+          </div>
+          </article>
+
+          <!-- 강좌 5: 염색공예 (마우스를 올리면 염색천1~4 사진 순서대로 전환) -->
+          <article class="course-card dye-course-card">
+            <a href="#" class="course-image dye-course-image" aria-label="염색공예 사진 보기">
+              <img src="images/염색천1.jpg" alt="염색공예 작품 사진 1" loading="lazy"
+                   data-dye-images="images/염색천1.jpg|images/염색천2.jpg|images/염색천3.jpg|images/염색천4.jpg">
+            </a>
+            <div class="course-content">
+              <div class="course-tags">
+                <span>공예</span>
+                <span>체험</span>
+              </div>
+              <h3><a href="#">염색공예</a></h3>
+              <p>색과 천이 만나 만들어내는<br>나만의 작품을 완성해 보세요.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- =========================
+     6. 문화갤러리
+========================= -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+
+    <!-- 갤러리 제목 -->
+<div class="gallery-heading">
+  <p class="small-title">CULTURE GALLERY</p>
+
+  <h2>문화갤러리</h2>
+
+  <p class="gallery-intro">
+    보고, 느끼고, 참여하며 나만의 이야기를 만들어보세요.
+  </p>
+</div>
+
+    <!-- 갤러리 카드 6개 -->
+    <div class="gallery-grid">
+
+      <!-- 1. 인생네컷 -->
+      <article class="gallery-card">
+<img
+  class="gallery-image-center gallery-click-image"
+  src="images/인생네컷.jpg"
+  alt="오늘의 모습을 기록하는 인생네컷 체험"
+>
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+          <h3>오늘의 나를 기록하는 인생네컷</h3>
+
+          <p class="gallery-description">
+            지금의 모습을 사진으로 남기며<br>
+            오늘의 나를 새롭게 바라봅니다.
+          </p>
+
+          <p class="gallery-question">
+            오늘의 나를 한 장에 담는다면 어떤 모습일까요?
+          </p>
+        </div>
+      </article>
+
+
+      <!-- 2. 안수정등 -->
+      <article class="gallery-card">
+        <img
+          class="gallery-image-center gallery-click-image"
+          src="images/안수정등.jpg"
+          alt="깊은 골짜기에서 손을 내미는 안수정등 이야기"
+        >
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+          <h3>안수정등</h3>
+
+          <p class="gallery-description">
+  절박한 순간에도 눈앞의 달콤함에 머무는<br>
+  인간의 모습을 통해 삶의 본질을 돌아봅니다.
+          </p>
+
+          <p class="gallery-question">
+            지금 나는 무엇에 매달려 살아가고 있나요?
+          </p>
+        </div>
+      </article>
+
+
+<!-- 3. 십우도 -->
+<article class="gallery-card">
+  <img
+    class="gallery-image-top gallery-click-image"
+    src="images/십우도.jpg"
+    alt="마음을 찾아가는 여정을 표현한 십우도"
+  >
+
+  <div class="gallery-overlay"></div>
+
+  <div class="gallery-content">
+    <h3>십우도</h3>
+
+    <p class="gallery-description">
+      소를 찾는 과정을 통해 깨달음에 이르는<br>
+      마음의 여정을 표현한 그림입니다.
+    </p>
+
+    <p class="gallery-question">
+      지금 나는 나의 마음을 잘 바라보고 있나요?
+    </p>
+  </div>
+</article>
+
+
+      <!-- 4. 천지창조 -->
+      <article class="gallery-card">
+        <img
+          class="gallery-image-center gallery-click-image"
+          src="images/천지창조.jpg"
+          alt="미켈란젤로의 천지창조 작품"
+        >
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+          <h3>천지창조</h3>
+
+          <p class="gallery-description">
+  하나님께서 세상과 생명을 창조하신 이야기를 통해<br>
+  새로운 시작과 생명의 의미를 생각합니다.
+          </p>
+
+          <p class="gallery-question">
+            내 삶을 다시 시작하게 하는 힘은 무엇인가요?
+          </p>
+        </div>
+      </article>
+
+
+      <!-- 5. 최후의 심판 -->
+      <article class="gallery-card">
+        <img
+          class="gallery-image-center gallery-click-image"
+          src="images/최후의 심판.jpg"
+          alt="선택과 책임을 생각하게 하는 최후의 심판 작품"
+        >
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+          <h3>최후의 심판</h3>
+
+          <p class="gallery-description">
+  삶의 선택이 남기는 의미를 바라보며<br>
+  책임과 정의에 대해 다시 생각합니다.
+          </p>
+
+          <p class="gallery-question">
+            오늘의 나는 나를 어디로 이끌고 있나요?
+          </p>
+        </div>
+      </article>
+
+
+      <!-- 6. 일체유심조 -->
+      <article class="gallery-card">
+        <img
+          class="gallery-image-center gallery-click-image"
+          src="images/일체유심조.jpg"
+          alt="마음이 세상을 만든다는 일체유심조 이야기"
+        >
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+          <h3>일체유심조</h3>
+
+<p class="gallery-description">
+  세상을 바라보는 마음에 따라<br>
+  우리의 삶도 달라질 수 있음을 살펴봅니다.
+</p>
+
+          <p class="gallery-question">
+            나는 지금 어떤 마음으로 세상을 바라보고 있나요?
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     갤러리 이미지 크게 보기
+========================= -->
+<div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+
+  <button
+    class="gallery-modal-close"
+    id="gallery-modal-close"
+    type="button"
+    aria-label="이미지 닫기"
+  >
+    ×
+  </button>
+
+  <img
+    class="gallery-modal-image"
+    id="gallery-modal-image"
+    src=""
+    alt=""
+  >
+
+  <p
+    class="gallery-modal-caption"
+    id="gallery-modal-caption"
+  ></p>
+
+</div>
+
+<!-- =========================
+     소울아카데미 대표 소개 (강사진 소개 바로 앞)
+========================= -->
+<section class="soul-director-section" id="director" aria-labelledby="soul-director-title">
+  <div class="soul-director-container">
+    <div class="soul-director-heading">
+      <p class="small-title">A MESSAGE FROM SOUL ACADEMY</p>
+      <h2 id="soul-director-title">대표 인사말</h2>
+    </div>
+    <div class="soul-director-card">
+      <figure class="soul-director-portrait">
+        <img src="images/김지현.jpg" alt="소울아카데미 김지현 대표" loading="lazy">
+        <figcaption class="soul-director-caption">
+          <small>HEAD DIRECTOR</small>
+          <strong>김지현 대표</strong>
+        </figcaption>
+      </figure>
+      <div class="soul-director-text">
+        <p class="soul-director-eyebrow">FROM THE DIRECTOR</p>
+        <h3>“다정한 마음에서 시작해,<br>새로운 가능성을 열어가는 삶”</h3>
+        <p class="soul-director-greeting">안녕하세요. 소울아카데미 대표 김지현입니다.</p>
+        <p>살아가며 건네받은 따뜻한 위로와 지혜는 때로 한 사람의 삶을 다시 일으키는 힘이 됩니다. 그 소중한 마음이 또 다른 누군가에게 전해질 수 있기를 바랍니다.</p>
+        <p>우리는 누구나 저마다의 가능성을 품고 있지만, 익숙한 생각과 일상 속에서 스스로의 가치를 놓치기도 합니다. 자신을 깊이 이해하고 새로운 관점으로 세상을 바라볼 때, 어제와는 다른 내일을 선택할 용기가 생깁니다.</p>
+        <p>이곳이 깊이 있는 배움과 진솔한 만남을 통해 자신만의 강점을 발견하고, 삶의 방향을 새롭게 그려 나가는 공간이 되었으면 합니다.</p>
+        <blockquote class="soul-director-quote">“받은 위로를 사랑으로 전하고,<br>깨달음의 순간을 삶의 변화로 이어갑니다.”</blockquote>
+        <p>한 사람의 작은 성찰이 새로운 시작이 되고, 그 시작이 더 깊은 이해와 의미 있는 변화로 이어지도록 따뜻하게 함께하겠습니다.</p>
+        <div class="soul-director-signature">소울아카데미 대표 &nbsp;<strong>김지현</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     강사진 소개
+========================= -->
+<section class="instructors-section" id="teachers">
+
+  <div class="instructors-container">
+
+    <!-- 강사진 제목 -->
+    <div class="instructors-heading">
+      <p class="instructors-small-title">OUR INSTRUCTORS</p>
+
+      <h2>함께 성장하는 강사진</h2>
+
+      <p class="instructors-intro">
+        각 분야의 전문성과 따뜻한 마음을 갖춘 강사진이
+        여러분의 새로운 시작을 함께합니다.
+      </p>
+    </div>
+
+
+    <!-- =========================
+         대표 강사 큰 카드
+    ========================== -->
+    <article class="main-instructor-card">
+
+      <!-- 대표 강사 설명 -->
+      <div class="main-instructor-content">
+
+        <span class="instructor-badge">
+          Main Instructor
+        </span>
+
+        <h3>김도현 강사</h3>
+
+        <p class="main-instructor-role">
+          인문학 · 바이블 클래스
+        </p>
+
+        <!-- 김도현 대표 강사 사진: images 폴더의 김도현.jpg 사용 -->
+        <div class="main-instructor-photo-frame">
+          <img src="images/김도현.jpg" alt="김도현 강사 사진" loading="lazy">
+        </div>
+
+        <!-- 주요 경력 -->
+        <ul class="main-instructor-career">
+          <li>청소년 지도</li>
+          <li>부부 교육</li>
+          <li>선교사 활동</li>
+          <li>성경 지도사</li>
+        </ul>
+
+        <!-- 소개글 -->
+        <p class="main-instructor-description">
+          <strong>“나를 발견하는 깨달음, 다시 피어나는 인생”</strong><br><br>
+
+          인생의 진정한 변화는 새로운 무언가를 더하는 것이 아니라, 미처 알지 못했던 나 자신을 발견하는 것에서 시작됩니다.<br><br>
+
+          때로는 익숙한 생각이 나를 가두고, 당연하게 여겼던 선택들이 삶의 방향을 결정하기도 합니다.<br><br>
+
+          <strong>나를 돌아보기 위해서는 좋은 매개체와 도전할 용기가 필요합니다.</strong><br><br>
+
+          <strong>‘나를 마주하다’</strong>는 깊이 있는 질문과 성찰을 통해 나의 생각과 삶을 새롭게 바라보고, 그 안에서 새로운 깨달음을 발견하는 배움의 여정입니다.<br><br>
+
+          깨달음은 시선을 바꾸고, 성찰은 삶의 방향을 바꿉니다.<br><br>
+
+          어제의 나를 이해하고, 오늘의 나를 발견하며, 내일의 나를 새롭게 설계하는 시간.<br><br>
+
+          <strong>진정한 나를 발견하는 순간, 당신의 인생은 다시 피어납니다.</strong>
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         코치 4명 카드
+    ========================== -->
+    <div class="instructor-card-grid">
+
+
+      <!-- 정근자 코치 -->
+      <article class="instructor-profile-card">
+
+        <div class="instructor-photo-frame" style="--portrait-url: url('images/정근자.jpg');">
+          <img class="instructor-profile-photo" src="images/정근자.jpg" alt="정근자 코치 사진">
+        </div>
+
+        <div class="instructor-profile-content">
+
+          <span class="instructor-position">
+            SOUL Fellow
+          </span>
+
+          <h3>정근자 코치</h3>
+
+          <ul>
+            <li>가족상담사</li>
+            <li>바이블 선교 활동</li>
+          </ul>
+
+          <p>
+            인생의 터닝포인터가 될 우리의 만남,<br>
+            기대하셔도 좋습니다!
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 박봉순 코치 -->
+      <article class="instructor-profile-card">
+
+        <div class="instructor-photo-frame" style="--portrait-url: url('images/박봉순2.jpg');">
+          <img class="instructor-profile-photo" src="images/박봉순2.jpg" alt="박봉순 코치 사진">
+        </div>
+
+        <div class="instructor-profile-content">
+
+          <span class="instructor-position">
+            SOUL Fellow
+          </span>
+
+          <h3>박봉순 코치</h3>
+
+          <ul>
+            <li>가족상담사</li>
+            <li>HTP, 도형 심리 상담</li>
+          </ul>
+
+          <p>
+            몸의 건강을 넘어 삶 전체의<br>
+            행복을 만들어 드리겠습니다
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 최은미 코치 -->
+      <article class="instructor-profile-card">
+
+        <div class="instructor-photo-frame" style="--portrait-url: url('images/최은미.jpg');">
+          <img class="instructor-profile-photo" src="images/최은미.jpg" alt="최은미 코치 사진">
+        </div>
+
+        <div class="instructor-profile-content">
+
+          <span class="instructor-position">
+           SOUL Fellow
+          </span>
+
+          <h3>최은미 코치</h3>
+
+          <ul>
+            <li>부모자녀 인적성 상담</li>
+          </ul>
+
+          <p>
+            열심히 살아온 당신! <br>
+            잃어버린 당신을 찾고 새롭게 당신을 <br>
+            컨설팅 해드리겠습니다.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- 김나영 코치 -->
+      <article class="instructor-profile-card">
+
+        <div class="instructor-photo-frame" style="--portrait-url: url('images/김나영.jpg');">
+          <img class="instructor-profile-photo" src="images/김나영.jpg" alt="김나영 코치 사진">
+        </div>
+
+        <div class="instructor-profile-content">
+
+          <span class="instructor-position">
+           SOUL Fellow
+          </span>
+
+          <h3>김나영 코치</h3>
+
+          <ul>
+            <li>부산대 심리학과</li>
+            <li>독서 치료사</li>
+            <li>성경 지도사</li>
+          </ul>
+
+          <p>
+            따뜻한 소통으로 새로운 삶의 방향을 <br>
+            발견하도록 함께 합니다.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+   </div>
+
+</section>
+
+
+    <!-- =========================
+         8. 수강후기
+    ========================== -->
+<section class="reviews-section" id="reviews">
+
+  <div class="reviews-container">
+
+    <!-- 후기 제목 -->
+    <div class="reviews-heading">
+      <p class="reviews-small-title">STUDENT REVIEWS</p>
+
+      <h2>수강생 후기</h2>
+
+      <p class="reviews-intro">
+  배움과 만남을 통해 달라진 수강생들의 이야기를 만나보세요.
+</p>
+
+<!-- 로그인한 회원에게만 보이는 후기 작성 버튼 -->
+<button
+  type="button"
+  class="review-write-button"
+  id="review-write-button"
+  style="display:none;"
+>
+  수강후기 작성하기
+</button>
+
+</div>
+
+
+<!-- 후기 슬라이더 전체 상자 -->
+<div class="review-slider-shell">
+
+  <!-- 실제 후기 슬라이더 -->
+  <div class="swiper review-slider">
+
+      <div class="swiper-wrapper">
+
+
+        <!-- 후기 1 -->
+        <article class="swiper-slide review-card">
+
+          <!-- 별점 -->
+          <div class="review-card-top">
+            <div
+              class="review-stars"
+              aria-label="별점 5점"
+            >
+              ★★★★★
+            </div>
+          </div>
+
+          <!-- 후기 내용 -->
+          <blockquote>
+            나를 돌아볼 수 있는 시간이었으며,<br>
+            행복한 삶이 무엇인지 알게 된 것 같습니다.
+          </blockquote>
+
+          <!-- 직업 -->
+          <div class="review-author">
+            <span class="review-job">
+              👨‍⚕️ 한의사
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- 후기 2 -->
+        <article class="swiper-slide review-card">
+
+          <!-- 별점 -->
+          <div class="review-card-top">
+            <div
+              class="review-stars"
+              aria-label="별점 5점"
+            >
+              ★★★★★
+            </div>
+          </div>
+
+          <!-- 후기 내용 -->
+          <blockquote>
+            삶에 스트레스와 불안감이 많았는데,<br>
+            심리적으로 위로가 되는 시간들이 많았습니다.<br>
+            저도 사람들에게 도움이 되어 드리고 싶습니다.
+          </blockquote>
+
+          <!-- 직업 -->
+          <div class="review-author">
+            <span class="review-job">
+              💁‍♀️ 주부
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- 후기 3 -->
+        <article class="swiper-slide review-card">
+
+          <!-- 별점 -->
+          <div class="review-card-top">
+            <div
+              class="review-stars"
+              aria-label="별점 5점"
+            >
+              ★★★★★
+            </div>
+          </div>
+
+          <!-- 후기 내용 -->
+          <blockquote>
+            시간이 금방 지나간 것 같습니다.<br>
+            이제는 목적 있는 실천으로 삶에 도전해보고 싶습니다.
+          </blockquote>
+
+          <!-- 직업 -->
+          <div class="review-author">
+            <span class="review-job">
+              🎵 음악강사
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- 후기 4 -->
+        <article class="swiper-slide review-card">
+
+          <!-- 별점 -->
+          <div class="review-card-top">
+            <div
+              class="review-stars"
+              aria-label="별점 5점"
+            >
+              ★★★★★
+            </div>
+          </div>
+
+          <!-- 후기 내용 -->
+          <blockquote>
+            생각하는 습관과 부지런한 습관이 길러졌으며,<br>
+            특히 주변 분들에게 긍정적이고 밝아졌다는 이야기를 많이 듣습니다.
+          </blockquote>
+
+          <!-- 직업 -->
+          <div class="review-author">
+            <span class="review-job">
+              💼 자영업자
+            </span>
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- 후기 아래 페이지 표시 -->
+      <div class="swiper-pagination"></div>
+
+    </div>
+    <!-- 실제 후기 슬라이더 끝 -->
+
+
+    <!-- 이전 버튼 -->
+    <button
+      class="review-button review-button-prev"
+      type="button"
+      aria-label="이전 후기"
+    >
+      ←
+    </button>
+
+
+    <!-- 다음 버튼 -->
+    <button
+      class="review-button review-button-next"
+      type="button"
+      aria-label="다음 후기"
+    >
+      →
+    </button>
+
+  </div>
+  <!-- 후기 슬라이더 전체 상자 끝 -->
+
+  </div>
+
+</section>
+
+<!-- =========================
+     수강후기 작성 팝업
+========================= -->
+
+<div
+  class="review-write-modal"
+  id="review-write-modal"
+  aria-hidden="true"
+>
+
+  <div class="review-write-modal-box">
+
+    <!-- 닫기 버튼 -->
+    <button
+      type="button"
+      class="review-write-close"
+      id="review-write-close"
+      aria-label="후기 작성 창 닫기"
+    >
+      ×
+    </button>
+
+
+    <!-- 제목 -->
+    <div class="review-write-heading">
+
+      <p class="reviews-small-title">
+        STUDENT REVIEW
+      </p>
+
+      <h2>
+        수강후기 작성
+      </h2>
+
+      <p>
+        수강하신 프로그램의 경험을 들려주세요.
+      </p>
+
+    </div>
+
+
+    <!-- 후기 작성 폼 -->
+    <form id="review-write-form">
+
+
+      <!-- 수강강좌 -->
+      <div class="review-write-field">
+
+        <label for="review-course">
+          수강강좌
+        </label>
+
+        <select
+          id="review-course"
+          required
+        >
+          <option value="">
+            강좌를 선택해 주세요
+          </option>
+
+          <option value="삶을 깨우는 바이블 클래스">
+            삶을 깨우는 바이블 클래스
+          </option>
+
+          <option value="나를 돌보는 아로마 테라피">
+            나를 돌보는 아로마 테라피
+          </option>
+
+          <option value="반짝이는 하루, 비즈공예">
+            반짝이는 하루, 비즈공예
+          </option>
+
+          <option value="자연과 함께 걷는 트레킹">
+            자연과 함께 걷는 트레킹
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- 별점 -->
+      <div class="review-write-field">
+
+        <label for="review-rating">
+          별점
+        </label>
+
+        <select
+          id="review-rating"
+          required
+        >
+          <option value="">
+            별점을 선택해 주세요
+          </option>
+
+          <option value="5">★★★★★ 5점</option>
+          <option value="4">★★★★☆ 4점</option>
+          <option value="3">★★★☆☆ 3점</option>
+          <option value="2">★★☆☆☆ 2점</option>
+          <option value="1">★☆☆☆☆ 1점</option>
+
+        </select>
+
+      </div>
+
+
+      <!-- 후기 내용 -->
+      <div class="review-write-field">
+
+        <label for="review-content">
+          후기 내용
+        </label>
+
+        <textarea
+          id="review-content"
+          rows="6"
+          maxlength="1000"
+          placeholder="수강하면서 느낀 점을 편하게 작성해 주세요."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <!-- 안내 메시지 -->
+      <p
+        class="review-write-message"
+        id="review-write-message"
+      ></p>
+
+
+      <!-- 저장 버튼 -->
+      <button
+        type="submit"
+        class="review-write-submit"
+        id="review-write-submit"
+      >
+        후기 등록하기
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     9. 아카데미 장소
+========================= -->
+<section class="location-section" id="location">
+
+  <div class="location-container">
+
+    <!-- 제목 -->
+    <div class="location-heading">
+
+      <p class="location-small-title">
+        LOCATION
+      </p>
+
+      <h2>
+        아카데미 오시는 길
+      </h2>
+
+      <p>
+        소울아카데미에서 나를 마주하는 새로운 배움을 시작해보세요.
+      </p>
+
+    </div>
+
+
+    <!-- 장소 정보와 지도 -->
+    <div class="location-content">
+
+
+      <!-- 왼쪽 장소 정보 -->
+      <div class="location-info">
+
+        <span class="location-label">
+          SOUL ACADEMY
+        </span>
+
+        <h3>
+          소울아카데미
+        </h3>
+
+        <p class="location-description">
+          배움과 만남이 함께하는 소울아카데미입니다.
+        </p>
+
+
+        <!-- 주소 -->
+        <div class="location-item">
+
+          <div class="location-icon" aria-hidden="true">
+            📍
+          </div>
+
+          <div>
+
+            <strong>
+              주소
+            </strong>
+
+            <p>
+              부산광역시 연제구 월드컵대로120번길 4 해인상가 2F
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 대중교통 -->
+        <div class="location-item">
+
+          <div class="location-icon" aria-hidden="true">
+            🚇
+          </div>
+
+          <div>
+
+            <strong>
+              대중교통
+            </strong>
+
+            <p>
+              지하철 1·3호선 연산역 4번 출구 이용 (도보 약 4~6분)<br>버스: 연산역·연산교차로 정류장 하차 후 도보 이동
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 운영시간 -->
+        <div class="location-item">
+
+          <div class="location-icon" aria-hidden="true">
+            🕘
+          </div>
+
+          <div>
+
+            <strong>
+              수강 시간
+            </strong>
+
+            <p>
+              월, 수, 금 10:00 / 14:30 / 19:00
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- 길찾기 버튼 -->
+        <a
+          href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%97%B0%EC%A0%9C%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%8C%80%EB%A1%9C120%EB%B2%88%EA%B8%B8%204%20%ED%95%B4%EC%9D%B8%EC%83%81%EA%B0%80"
+          class="location-button"
+          target="_blank"
+          rel="noopener"
+        >
+          네이버 지도 길찾기
+        </a>
+
+      </div>
+
+
+      <!-- 지도를 클릭하지 않아도 바로 보이도록 지도 화면을 삽입합니다. -->
+      <div class="location-map">
+        <iframe
+          class="soul-map-embed"
+          title="소울아카데미 위치 지도 - 부산광역시 연제구 월드컵대로120번길 4"
+          src="https://www.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%97%B0%EC%A0%9C%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%8C%80%EB%A1%9C120%EB%B2%88%EA%B8%B8%204%20%ED%95%B4%EC%9D%B8%EC%83%81%EA%B0%80&amp;output=embed"
+          loading="eager"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+        <a class="soul-map-naver-link"
+           href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%97%B0%EC%A0%9C%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%8C%80%EB%A1%9C120%EB%B2%88%EA%B8%B8%204%20%ED%95%B4%EC%9D%B8%EC%83%81%EA%B0%80"
+           target="_blank" rel="noopener noreferrer">네이버 지도에서 길찾기 ↗</a>
+      </div>
+
+    </div>
+    <!-- location-content 끝 -->
+
+  </div>
+  <!-- location-container 끝 -->
+
+</section>
+
+</main>
+
+<!-- =========================
+     10. 하단 정보
+========================== -->
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <!-- 왼쪽: 아카데미 소개 -->
+    <div class="footer-brand">
+
+      <a href="#home" class="footer-logo">
+        SOUL ACADEMY
+      </a>
+
+      <p>
+        삶의 변화를 함께 만들어가는 성장 프로그램<br>
+        배우는 순간 생각이 움직이고 인생이 움직여집니다
+      </p>
+
+    </div>
+
+
+    <!-- 가운데: 수강신청 안내 -->
+    <div class="footer-contact">
+
+      <h2>
+        새로운 배움을 시작해보세요.
+      </h2>
+
+      <p>
+        다양한 프로그램과 수강 일정을 확인하고<br>
+        나에게 맞는 배움을 시작해보세요.
+      </p>
+
+      <a
+        href="#"
+        class="footer-contact-button apply-open" 
+      >
+        수강신청
+      </a>
+
+    </div>
+
+
+    <!-- 오른쪽: 바로가기 -->
+    <div class="footer-menu">
+
+      <h2>바로가기</h2>
+
+      <ul>
+        <li>
+          <a href="#" class="apply-open">수강신청</a>
+        </li>
+
+        <li>
+          <a href="#location">오시는 길</a>
+        </li>
+
+        <li>
+          <a href="#about">아카데미 소개</a>
+        </li>
+
+        <li>
+          <a href="#teachers">강사진 소개</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <!-- 푸터 맨 아래 -->
+  <div class="container footer-bottom">
+
+    <div class="footer-policy">
+      <a href="#">개인정보처리방침</a>
+      <a href="#">이용약관</a>
+    </div>
+
+    <address>
+      부산광역시 연제구 월드컵대로120번길 4 해인상가 2F
+    </address>
+
+    <p>
+      © 2026 SOUL ACADEMY. ALL RIGHTS RESERVED.
+    </p>
+
+  </div>
+
+</footer>
+
+<!-- 여기부터 로그인 팝업 넣기 -->
+
+<div
+  class="login-modal"
+  id="login-modal"
+  aria-hidden="true"
+>
+
+  <div class="login-modal-box">
+
+    <button
+      type="button"
+      class="login-close"
+      id="login-close"
+    >
+      ×
+    </button>
+
+    <div class="login-heading">
+      <p class="small-title">DAOM ACADEMY</p>
+
+      <h2>회원 로그인</h2>
+
+      <p>
+        로그인 후 회원 서비스를 이용하실 수 있습니다.
+      </p>
+    </div>
+
+    <div class="login-field">
+      <label for="auth-email">
+        이메일
+      </label>
+
+      <input
+        type="email"
+        id="auth-email"
+        placeholder="이메일을 입력하세요"
+      >
+    </div>
+
+    <div class="login-field">
+      <label for="auth-password">
+        비밀번호
+      </label>
+
+      <input
+        type="password"
+        id="auth-password"
+        placeholder="비밀번호를 입력하세요"
+      >
+    </div>
+
+    <button
+      type="button"
+      class="login-submit"
+      id="login-submit"
+    >
+      로그인
+    </button>
+
+    <button
+      type="button"
+      class="signup-button"
+      id="signup-submit"
+    >
+      회원가입
+    </button>
+
+    <p
+      class="login-message"
+      id="login-message"
+    ></p>
+
+  </div>
+
+</div>
+
+<!-- 로그인 팝업 끝 -->
+
+  <!-- 위로 올라가기 버튼 -->
+  <button
+    type="button"
+    class="top-button"
+    id="topButton"
+    aria-label="페이지 맨 위로 이동"
+  >
+    ↑
+  </button>
+
+
+<!-- =========================
+     수강신청 팝업
+========================= -->
+
+<div
+  class="apply-modal"
+  id="apply-modal"
+  aria-hidden="true"
+>
+
+  <div class="apply-modal-box">
+
+    <!-- 오른쪽 위 닫기 버튼 -->
+    <button
+      type="button"
+      class="apply-close"
+      id="apply-close"
+      aria-label="수강신청 창 닫기"
+    >
+      ×
+    </button>
+
+
+    <!-- 신청서 제목 -->
+    <div class="apply-heading">
+
+      <p class="apply-small-title">
+        수강신청
+      </p>
+
+      <h2>
+        새로운 배움의 시작을 함께합니다
+      </h2>
+
+      <p>
+        아래 내용을 작성해주시면<br>
+        확인 후 친절하게 연락드리겠습니다.
+      </p>
+
+    </div>
+
+
+    <!-- 실제 신청서 -->
+    <form
+      class="apply-form"
+      id="apply-form"
+      action="https://formsubmit.co/wjdtjq28@gmail.com"
+      method="POST" 
+    >
+
+<input
+  type="hidden"
+  name="_subject"
+  value="[다옴 아카데미] 새로운 수강신청이 들어왔습니다."
+>
+
+<input
+  type="hidden"
+  name="_template"
+  value="table"
+>
+
+<input
+  type="hidden"
+  name="_captcha"
+  value="false"
+>
+
+<input
+  type="hidden"
+  name="_next"
+  value="https://daomacademy.com/thanks.html"
+>
+
+<input
+  type="text"
+  name="_honey"
+  style="display:none"
+>
+
+      <!-- 수강강좌: 추천강좌 카드 제목과 자동 연결됩니다. -->
+      <div class="apply-field">
+        <label for="apply-course">수강강좌 선택 <span aria-hidden="true">*</span></label>
+        <select id="apply-course" name="course" required>
+          <option value="">신청할 강좌를 선택해 주세요</option>
+        </select>
+      </div>
+
+      <!-- 이름 + 연락처 -->
+      <div class="apply-form-grid">
+
+        <div class="apply-field">
+          <label for="apply-name">
+            이름
+          </label>
+
+          <input
+            type="text"
+            id="apply-name"
+            name="name"
+            placeholder="성함을 입력해 주세요"
+            required
+          >
+        </div>
+
+
+        <div class="apply-field">
+          <label for="apply-phone">
+            연락처
+          </label>
+
+          <input
+            type="tel"
+            id="apply-phone"
+            name="phone"
+            placeholder="예) 010-1234-5678"
+            required
+          >
+        </div>
+
+
+        <!-- 생년월일 -->
+        <div class="apply-field">
+          <label for="apply-birth">
+            생년월일
+          </label>
+
+          <input
+            type="date"
+            id="apply-birth"
+            name="birth"
+          >
+        </div>
+
+
+        <!-- 거주지역 -->
+        <div class="apply-field">
+          <label for="apply-area">
+            거주지역
+          </label>
+
+          <input
+            type="text"
+            id="apply-area"
+            name="area"
+            placeholder="예) 부산시 부산진구"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- 신청동기 -->
+      <div class="apply-field">
+
+        <label for="apply-message">
+          신청 동기 또는 관심 분야
+        </label>
+
+        <textarea
+          id="apply-message"
+          name="message"
+          rows="5"
+          placeholder="참여하고 싶은 이유를 편하게 남겨주세요."
+        ></textarea>
+
+      </div>
+
+
+      <!-- 개인정보 동의 -->
+      <label class="apply-agree">
+
+        <input
+          type="checkbox"
+          id="apply-agree"
+          name="개인정보동의"
+          value="동의함"
+          required
+        >
+
+        <span>
+          수강 상담을 위한 개인정보 수집 및 이용에 동의합니다.
+        </span>
+
+      </label>
+
+
+      <!-- 최종 신청 버튼 -->
+      <button
+        type="submit"
+        class="apply-submit"
+      >
+        수강 신청하기
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- Swiper 슬라이더 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- 네이버 지도는 별도 SDK 없이 공식 지도 검색 링크로 연결합니다. -->
+
+<script>
+  const galleryCards = document.querySelectorAll(".gallery-card");
+  const galleryModal = document.getElementById("gallery-modal");
+  const galleryModalImage = document.getElementById("gallery-modal-image");
+  const galleryModalCaption = document.getElementById("gallery-modal-caption");
+  const galleryModalClose = document.getElementById("gallery-modal-close");
+
+  function openGalleryModal(card) {
+    const image = card.querySelector("img");
+    const title = card.querySelector("h3");
+
+    if (!image || !galleryModal || !galleryModalImage) {
+      return;
+    }
+
+    galleryModalImage.src = image.src;
+    galleryModalImage.alt = image.alt;
+
+    if (galleryModalCaption) {
+      galleryModalCaption.textContent =
+        title ? title.textContent : image.alt;
+    }
+
+    galleryModal.classList.add("is-open");
+    galleryModal.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGalleryModal() {
+    galleryModal.classList.remove("is-open");
+    galleryModal.setAttribute("aria-hidden", "true");
+
+    galleryModalImage.src = "";
+    galleryModalImage.alt = "";
+
+    if (galleryModalCaption) {
+      galleryModalCaption.textContent = "";
+    }
+
+    document.body.style.overflow = "";
+  }
+
+  galleryCards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      openGalleryModal(card);
+    });
+  });
+
+  galleryModalClose.addEventListener("click", function (event) {
+    event.stopPropagation();
+    closeGalleryModal();
+  });
+
+  galleryModal.addEventListener("click", function (event) {
+    if (
+      event.target === galleryModal ||
+      event.target === galleryModalImage
+    ) {
+      closeGalleryModal();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (
+      event.key === "Escape" &&
+      galleryModal.classList.contains("is-open")
+    ) {
+      closeGalleryModal();
+    }
+  });
+</script>
+
+<!-- =========================
+     홈페이지 배경 음악
+========================= -->
+
+<audio
+  id="background-music"
+  autoplay
+  loop
+  preload="auto"
+>
+  <source
+    src="music/daom-music.mp3"
+    type="audio/mpeg"
+  >
+</audio>
+
+<button
+  id="music-button"
+  class="music-button"
+  type="button"
+  aria-label="배경 음악 켜기 또는 끄기"
+>
+  <span class="music-icon">♪</span>
+  <span class="music-text">음악 켜기</span>
+</button>
+
+
+<!-- 내가 만든 JavaScript는 여기서 딱 한 번만 불러옵니다 -->
+<!-- 통합본: 기존 script.js 전체를 아래에 내장했습니다. -->
+<script>
+/* =========================
+   수강생 후기 슬라이더
+========================= */
+const reviewSwiper = new Swiper(".review-slider", {
+
+  centeredSlides: false,
+
+  loop: true,
+
+  grabCursor: true,
+
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  },
+
+  pagination: {
+    el: ".review-slider .swiper-pagination",
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: ".review-button-next",
+    prevEl: ".review-button-prev"
+  },
+
+  breakpoints: {
+
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 16
+    },
+
+    700: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20
+    },
+
+    1000: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 24
+    }
+  }
+});
+
+/* =========================
+   홈페이지 배경 음악
+========================= */
+
+const backgroundMusic =
+  document.getElementById("background-music");
+
+const musicButton =
+  document.getElementById("music-button");
+
+const musicText =
+  musicButton?.querySelector(".music-text");
+
+
+if (backgroundMusic && musicButton) {
+
+  /* 배경음악 볼륨 */
+  backgroundMusic.volume = 0.25;
+
+
+  /* 음악이 켜졌을 때 버튼 표시 */
+  function showMusicOn() {
+
+    musicButton.classList.add("is-playing");
+
+    if (musicText) {
+      musicText.textContent = "음악 끄기";
+    }
+  }
+
+
+  /* 음악이 꺼졌을 때 버튼 표시 */
+  function showMusicOff() {
+
+    musicButton.classList.remove("is-playing");
+
+    if (musicText) {
+      musicText.textContent = "음악 켜기";
+    }
+  }
+
+
+  /* =========================
+     홈페이지를 열면
+     우선 자동재생을 시도
+  ========================= */
+
+  window.addEventListener("load", function () {
+
+    backgroundMusic.play()
+
+      .then(function () {
+
+        /* 자동재생 성공 */
+        showMusicOn();
+
+      })
+
+      .catch(function () {
+
+        /*
+          브라우저가 자동재생을 막은 경우
+          아직 음악은 꺼진 상태
+        */
+
+        showMusicOff();
+
+      });
+
+  });
+
+
+  /* =========================
+     자동재생이 막혔다면
+     방문자가 홈페이지를
+     처음 클릭하는 순간 음악 시작
+  ========================= */
+
+  async function startMusicAfterFirstTouch() {
+
+    if (backgroundMusic.paused) {
+
+      try {
+
+        await backgroundMusic.play();
+
+        showMusicOn();
+
+      } catch (error) {
+
+        console.log(
+          "브라우저가 음악 재생을 차단했습니다.",
+          error
+        );
+
+      }
+
+    }
+
+
+    /*
+      첫 클릭 이후에는
+      이 자동 실행 기능을 없앱니다.
+    */
+
+    document.removeEventListener(
+      "click",
+      startMusicAfterFirstTouch
+    );
+
+    document.removeEventListener(
+      "touchstart",
+      startMusicAfterFirstTouch
+    );
+
+  }
+
+
+  document.addEventListener(
+    "click",
+    startMusicAfterFirstTouch
+  );
+
+  document.addEventListener(
+    "touchstart",
+    startMusicAfterFirstTouch
+  );
+
+
+  /* =========================
+     음악 버튼으로 직접
+     켜기 / 끄기
+  ========================= */
+
+  musicButton.addEventListener(
+    "click",
+    async function (event) {
+
+      /*
+        위의 '첫 클릭 자동재생'과
+        동시에 실행되지 않도록 함
+      */
+
+      event.stopPropagation();
+
+
+      /* 음악이 꺼져 있으면 */
+      if (backgroundMusic.paused) {
+
+        try {
+
+          await backgroundMusic.play();
+
+          showMusicOn();
+
+        } catch (error) {
+
+          console.log(
+            "음악 재생 실패",
+            error
+          );
+
+        }
+
+      }
+
+      /* 음악이 켜져 있으면 */
+      else {
+
+        backgroundMusic.pause();
+
+        showMusicOff();
+
+      }
+
+    }
+  );
+
+}
+
+/* =========================
+   수강신청 팝업
+========================= */
+
+const applyModal = document.getElementById("apply-modal");
+const applyCloseButton = document.getElementById("apply-close");
+
+
+/* 홈페이지에 있는 수강신청 버튼들을 찾습니다 */
+const applyButtons =
+  document.querySelectorAll(".apply-open");
+
+/* 수강신청 팝업 열기 */
+function openApplyModal(event) {
+
+  if (event) {
+    event.preventDefault();
+  }
+
+  if (!applyModal) {
+    return;
+  }
+
+  applyModal.classList.add("is-open");
+
+  /* 팝업이 열렸을 때 뒤쪽 홈페이지 스크롤 막기 */
+  document.body.style.overflow = "hidden";
+}
+
+
+/* 수강신청 팝업 닫기 */
+function closeApplyModal() {
+
+  if (!applyModal) {
+    return;
+  }
+
+  applyModal.classList.remove("is-open");
+
+  /* 다시 홈페이지 스크롤 가능 */
+  document.body.style.overflow = "";
+}
+
+
+/* 모든 수강신청 버튼에 팝업 열기 기능 연결 */
+applyButtons.forEach(function (button) {
+
+  button.addEventListener(
+    "click",
+    openApplyModal
+  );
+
+});
+
+
+/* X 버튼으로 닫기 */
+if (applyCloseButton) {
+
+  applyCloseButton.addEventListener(
+    "click",
+    closeApplyModal
+  );
+
+}
+
+
+/* 팝업 바깥의 어두운 부분을 클릭해도 닫기 */
+if (applyModal) {
+
+  applyModal.addEventListener(
+    "click",
+    function (event) {
+
+      if (event.target === applyModal) {
+        closeApplyModal();
+      }
+
+    }
+  );
+
+}
+
+
+/* 키보드 ESC를 눌러도 닫기 */
+document.addEventListener(
+  "keydown",
+  function (event) {
+
+    if (event.key === "Escape") {
+      closeApplyModal();
+    }
+
+  }
+);
+/* =========================
+   통합 모바일 메뉴
+========================= */
+
+const header = document.querySelector(".header");
+const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mainMenu = document.getElementById("mobileMenu");
+
+if (header && mobileMenuButton && mainMenu) {
+
+  mobileMenuButton.addEventListener("click", function () {
+
+    const isOpen = header.classList.toggle("is-menu-open");
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+    mobileMenuButton.setAttribute(
+      "aria-label",
+      isOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"
+    );
+
+    mobileMenuButton.textContent = isOpen ? "×" : "☰";
+
+  });
+
+
+  /* 메뉴 클릭 시 자동 닫기 */
+  const menuLinks = mainMenu.querySelectorAll("a");
+
+  menuLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+      header.classList.remove("is-menu-open");
+
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+      mobileMenuButton.setAttribute("aria-label", "모바일 메뉴 열기");
+      mobileMenuButton.textContent = "☰";
+
+    });
+
+  });
+
+
+  /* ESC 키로 메뉴 닫기 */
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+      header.classList.remove("is-menu-open");
+
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+      mobileMenuButton.setAttribute("aria-label", "모바일 메뉴 열기");
+      mobileMenuButton.textContent = "☰";
+
+    }
+
+  });
+
+}
+
+/* =========================
+   홈페이지 검색 기능
+========================= */
+
+/* 검색 관련 요소 찾기 */
+const searchOpenButton =
+  document.getElementById("search-open-button");
+
+const siteSearchBox =
+  document.getElementById("site-search-box");
+
+const siteSearchInput =
+  document.getElementById("site-search-input");
+
+const siteSearchSubmit =
+  document.getElementById("site-search-submit");
+
+const siteSearchClose =
+  document.getElementById("site-search-close");
+
+
+/* =========================
+   검색창 열기
+========================= */
+
+function openSiteSearch() {
+
+  if (!siteSearchBox) {
+    return;
+  }
+
+  siteSearchBox.classList.add("is-open");
+
+  /* 검색창이 열리면 입력칸에 바로 커서 */
+  setTimeout(function () {
+
+    if (siteSearchInput) {
+      siteSearchInput.focus();
+    }
+
+  }, 100);
+}
+
+
+/* =========================
+   검색창 닫기
+========================= */
+
+function closeSiteSearch() {
+
+  if (!siteSearchBox) {
+    return;
+  }
+
+  siteSearchBox.classList.remove("is-open");
+}
+
+
+/* =========================
+   실제 홈페이지 글자 검색
+========================= */
+
+function runSiteSearch() {
+
+  if (!siteSearchInput) {
+    return;
+  }
+
+  const keyword =
+    siteSearchInput.value
+      .trim()
+      .toLowerCase();
+
+
+  /* 아무것도 입력하지 않았을 때 */
+  if (keyword === "") {
+
+    alert("검색어를 입력해주세요.");
+
+    siteSearchInput.focus();
+
+    return;
+  }
+
+
+  /* 수강신청은 팝업 열기 */
+  if (
+    keyword === "수강신청" ||
+    keyword === "신청"
+  ) {
+
+    closeSiteSearch();
+
+    if (typeof openApplyModal === "function") {
+      openApplyModal();
+    }
+
+    return;
+  }
+
+
+  /* 홈페이지의 모든 section을 찾음 */
+  const searchSections =
+    document.querySelectorAll("main section");
+
+  let foundSection = null;
+
+
+  /* 각 section의 글자를 하나씩 확인 */
+  searchSections.forEach(function (section) {
+
+    if (foundSection) {
+      return;
+    }
+
+    const sectionText =
+      section.innerText
+        .toLowerCase();
+
+    if (sectionText.includes(keyword)) {
+      foundSection = section;
+    }
+
+  });
+
+
+  /* 검색 결과를 찾았을 때 */
+  if (foundSection) {
+
+    closeSiteSearch();
+
+    foundSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    return;
+  }
+
+
+  /* 검색 결과가 없을 때 */
+  alert(
+    "'" +
+    siteSearchInput.value +
+    "'에 대한 검색 결과를 찾지 못했습니다."
+  );
+
+}
+
+/* =========================
+   검색한 위치로 이동
+========================= */
+
+function moveToSearchSection(sectionId) {
+
+  const section =
+    document.getElementById(sectionId);
+
+  if (!section) {
+
+    alert("해당 메뉴를 찾을 수 없습니다.");
+
+    return;
+  }
+
+  closeSiteSearch();
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+}
+
+
+/* =========================
+   검색 버튼 클릭
+========================= */
+
+if (searchOpenButton) {
+
+  searchOpenButton.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+      openSiteSearch();
+
+    }
+  );
+
+}
+
+
+/* =========================
+   검색창 안 검색 버튼
+========================= */
+
+if (siteSearchSubmit) {
+
+  siteSearchSubmit.addEventListener(
+    "click",
+    runSiteSearch
+  );
+
+}
+
+
+/* =========================
+   Enter 키를 눌러도 검색
+========================= */
+
+if (siteSearchInput) {
+
+  siteSearchInput.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        runSiteSearch();
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================
+   X 버튼으로 검색창 닫기
+========================= */
+
+if (siteSearchClose) {
+
+  siteSearchClose.addEventListener(
+    "click",
+    closeSiteSearch
+  );
+
+}
+
+
+/* =========================
+   ESC 키로 검색창 닫기
+========================= */
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+
+    if (event.key === "Escape") {
+      closeSiteSearch();
+    }
+
+  }
+);
+
+/* =========================
+   맨 위로 이동 버튼
+========================= */
+
+const topButton =
+  document.getElementById("topButton");
+
+
+if (topButton) {
+
+  /* 페이지를 어느 정도 내리면 버튼 보이기 */
+  window.addEventListener(
+    "scroll",
+    function () {
+
+      if (window.scrollY > 300) {
+
+        topButton.classList.add("is-show");
+
+      } else {
+
+        topButton.classList.remove("is-show");
+
+      }
+
+    }
+  );
+
+
+  /* ↑ 버튼을 누르면 맨 위로 이동 */
+  topButton.addEventListener(
+    "click",
+    function () {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+  );
+
+}
+
+</script>
+
+<!-- Supabase 기능 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- 내가 만든 로그인 기능 -->
+<script src="auth.js"></script>
+
+
+<!-- 추천강좌 카드의 이름을 수강신청 강좌 선택란과 자동 동기화 -->
+<script>
+(function () {
+  "use strict";
+  const grid = document.querySelector("#courses .course-grid");
+  const select = document.getElementById("apply-course");
+  if (!grid || !select) return;
+
+  function getRecommendedCourses() {
+    return Array.from(grid.querySelectorAll(".course-card .course-content h3"))
+      .map(function (heading) { return heading.textContent.trim().replace(/\s+/g, " "); })
+      .filter(function (title, index, names) { return title && names.indexOf(title) === index; });
+  }
+
+  function syncCourseOptions() {
+    const previous = select.value;
+    const names = getRecommendedCourses();
+    // Placeholder stays first; all other options come from the visible cards.
+    select.replaceChildren(new Option("신청할 강좌를 선택해 주세요", ""));
+    names.forEach(function (name) {
+      select.add(new Option(name, name));
+    });
+    // Preserve user's selection if the course still exists.
+    if (names.includes(previous)) select.value = previous;
+  }
+
+  syncCourseOptions();
+  // Refresh on opening the application modal, including after editing cards.
+  document.querySelectorAll(".apply-open").forEach(function (button) {
+    button.addEventListener("click", syncCourseOptions, true);
+  });
+  // Also support dynamically modified course titles/cards without page reload.
+  const observer = new MutationObserver(syncCourseOptions);
+  observer.observe(grid, { childList: true, characterData: true, subtree: true });
+})();
+</script>
+
+
+<!-- 염색공예 카드: 마우스 올림 / 키보드 포커스 중에 4장의 사진 자동 전환 -->
+<script>
+(function () {
+  "use strict";
+  const card = document.querySelector(".dye-course-card");
+  const img = card && card.querySelector("img[data-dye-images]");
+  if (!card || !img) return;
+
+  const images = img.dataset.dyeImages.split("|");
+  let current = 0;
+  let timer = null;
+  let active = false;
+
+  // 이미지 파일은 기존 images 폴더에서 불러옵니다.
+  images.forEach(function (src) {
+    const preload = new Image();
+    preload.src = src;
+  });
+
+  function show(index) {
+    current = index;
+    img.src = images[current];
+    img.alt = "염색공예 작품 사진 " + (current + 1);
+  }
+  function start() {
+    if (active) return;
+    active = true;
+    show(0);
+    timer = window.setInterval(function () {
+      show((current + 1) % images.length);
+    }, 1300);
+  }
+  function stop() {
+    active = false;
+    window.clearInterval(timer);
+    timer = null;
+    show(0);
+  }
+
+  card.addEventListener("mouseenter", start);
+  card.addEventListener("mouseleave", stop);
+  card.addEventListener("focusin", start);
+  card.addEventListener("focusout", function (event) {
+    if (!card.contains(event.relatedTarget)) stop();
+  });
+})();
+</script>
+
+</body>
+</html>
