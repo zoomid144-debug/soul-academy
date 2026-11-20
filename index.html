@@ -4653,6 +4653,149 @@ body {
 }
 .soul-map-naver-link:hover { background: #f5f5f5; }
 
+
+/* 김도현 강사: 사진과 이력 박스를 같은 중앙선에 맞춤 */
+.main-instructor-content > .main-instructor-photo-frame {
+  justify-self: center;
+}
+.main-instructor-content > .main-instructor-career {
+  justify-self: center;
+  width: min(100%, 290px);
+  min-width: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  .main-instructor-content > .main-instructor-photo-frame,
+  .main-instructor-content > .main-instructor-career {
+    justify-self: center;
+    width: min(100%, 320px);
+  }
+}
+
+
+/* =============================================================
+   SOUL ACADEMY | PC / 태블릿 / 모바일 최종 반응형 보정 (2026-11)
+   기존 콘텐츠·사진·기능 유지, 화면 폭에 맞게 배치만 조정
+   특히 메인 강사 2열 grid-area 충돌로 인한 모바일 가로 넘침 수정
+============================================================= */
+html, body { max-width: 100%; }
+body { overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+.container, .instructors-container, .location-container,
+.soul-director-container, .reviews-container { box-sizing: border-box; }
+.course-grid > *, .gallery-grid > *, .instructor-card-grid > *,
+.about-inner > *, .location-content > *, .footer-inner > *,
+.soul-director-card > * { min-width: 0; }
+.soul-hero-banner { width: 100%; max-width: 100%; height: auto; }
+
+@media (max-width: 1000px) {
+  .header-inner { gap: 12px; }
+  .header-buttons { gap: 9px; }
+  .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-grid, .instructor-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .location-content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 850px) {
+  /* 소개·대표·강사진 영역을 화면 한 열에 맞게 정렬 */
+  .about-inner { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .about-text { max-width: none; padding-left: 20px; }
+  .soul-director-card { grid-template-columns: minmax(0, 1fr); }
+  .soul-director-portrait { width: min(100%, 480px); justify-self: center; }
+
+  .main-instructor-content {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "badge"
+      "name"
+      "role"
+      "portrait"
+      "career"
+      "description" !important;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .main-instructor-content > .main-instructor-photo-frame {
+    width: min(100%, 320px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 10px auto 16px;
+    justify-self: center;
+  }
+  .main-instructor-content > .main-instructor-career {
+    width: min(100%, 320px);
+    margin: 0 auto 20px;
+    justify-self: center;
+  }
+  .main-instructor-description {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 0 0;
+    border-left: 0;
+    border-top: 1px solid #eadcde;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  .container, .soul-director-container, .location-container,
+  .instructors-container, .reviews-container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-inner { width: calc(100% - 28px); height: 70px; gap: 7px; }
+  .logo { flex-shrink: 0; }
+  .logo span { font-size: 21px; }
+  .logo small { font-size: 12px; }
+  .header-buttons { gap: 5px; }
+  .header-buttons .search-button { padding: 6px 5px; font-size: 12px; }
+  .header-buttons .apply-button { padding: 8px 10px; font-size: 12px; white-space: nowrap; }
+  .mobile-menu-button { flex-shrink: 0; font-size: 23px; padding: 5px; }
+  .site-search-box { top: 70px; }
+  .mobile-menu { max-width: 100%; }
+
+  .section-title h2, .section-heading h2 { font-size: clamp(25px, 7vw, 34px); line-height: 1.4; word-break: keep-all; }
+  .about-inner { gap: 22px; }
+  .about-text { padding-left: 16px; font-size: 15px; }
+  .about-text p { overflow-wrap: break-word; }
+  .course-grid, .gallery-grid, .instructor-card-grid { grid-template-columns: minmax(0, 1fr); }
+  .course-card, .gallery-card, .instructor-profile-card { max-width: 100%; }
+
+  .soul-director-card { gap: 22px; padding: 16px; }
+  .soul-director-portrait { min-height: 0; aspect-ratio: 3 / 4; }
+  .soul-director-text h3 { font-size: clamp(22px, 6vw, 29px); }
+  .soul-director-quote { padding: 14px; font-size: 15px; }
+
+  .main-instructor-card { padding: 20px 16px; }
+  .main-instructor-content h3 { font-size: 27px; }
+  .main-instructor-content > .main-instructor-photo-frame,
+  .main-instructor-content > .main-instructor-career { width: min(100%, 320px); }
+  .main-instructor-description { font-size: 14px; line-height: 1.8; }
+  .instructor-photo-frame { height: 340px; }
+
+  .location-map, .soul-map-embed { min-height: 300px; }
+  .soul-map-naver-link { right: 9px; bottom: 9px; padding: 9px 11px; font-size: 12px; }
+  .footer-inner { grid-template-columns: minmax(0, 1fr); }
+  .footer-menu { grid-column: auto; }
+  .footer-bottom { overflow-wrap: anywhere; }
+  .apply-modal-box { max-width: 100%; }
+  .apply-form-grid { grid-template-columns: minmax(0,1fr); }
+  .apply-form-grid > * { min-width: 0; }
+  .apply-field input, .apply-field textarea, .apply-field select { max-width: 100%; }
+}
+
+@media (max-width: 375px) {
+  .header-inner { width: calc(100% - 20px); }
+  .logo span { font-size: 19px; }
+  .logo small { font-size: 11px; }
+  .header-buttons .apply-button { padding: 7px 8px; font-size: 11px; }
+  .header-buttons .search-button { font-size: 11px; }
+  .main-instructor-card { padding: 17px 12px; }
+  .instructor-photo-frame { height: 290px; }
+}
+
 </style>
 
 
@@ -6411,7 +6554,7 @@ body {
   preload="auto"
 >
   <source
-    src="music/daom-music.mp3"
+    src="배경음.mp3"
     type="audio/mpeg"
   >
 </audio>
